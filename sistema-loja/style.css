@@ -6,10 +6,13 @@ header,body{
 
 header{
     background-color: blueviolet;
+    height: 8vh
 }
 body{
     background-color: blue;
 }
 footer{
     background-color: crimson;
+    height: 24vh;
+    margin-top: 372px;
 }
