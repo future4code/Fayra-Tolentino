@@ -4,15 +4,20 @@ header,body{
     font-family:lato;
   }
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
 header{
     background-color: blueviolet;
     height: 8vh
 }
 body{
-    background-color: blue;
+    background-image: url('img/background.jpg');
+    background-size:650px 650px;
 }
 footer{
-    background-color: crimson;
+    background-color:;
     height: 24vh;
     margin-top: 372px;
 }
