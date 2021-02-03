@@ -30,6 +30,16 @@ header{
     border-top: 10px;
 }
 
+.slogan{
+    color: #DE3C15;
+    font-weight: bolder;
+    font-style: oblique;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    bottom: 84px;
+}
+
 body{
     height: 60vh;
     background-image: url('img/background.png');
