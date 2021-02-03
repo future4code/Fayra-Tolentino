@@ -7,7 +7,6 @@ p,a{
     text-decoration:none;
     color:#fef5f0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
 }
 
 a{
@@ -32,10 +31,11 @@ header{
 }
 
 body{
+    height: 60vh;
     background-image: url('img/background.png');
 }
 footer{
     background-color:#1f6b69;
-    height: 24vh;
-    margin-top: 372px;
+    height: 20vh;
+    margin-top: 136px;
 }
