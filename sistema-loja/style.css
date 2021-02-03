@@ -27,7 +27,8 @@ header{
 
 .navbar{
     margin-left: 800px;
-    border-top: 10px;
+    position: relative;
+    top: 12px;
 }
 
 .slogan{
