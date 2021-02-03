@@ -44,9 +44,24 @@ header{
 body{
     height: 60vh;
     background-image: url('img/background.png');
+    background-repeat: no-repeat;
+    width: 100vw;
 }
+
 footer{
     background-color:#1f6b69;
     height: 20vh;
     margin-top: 136px;
+    /* align-items: center; */
+}
+
+.container-redes{
+    /* align-items: center; */
+    position: relative; 
+    left: 600px;
+    color: white;
+}
+
+.redes{
+    margin-right: 16px;
 }
