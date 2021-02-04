@@ -7,7 +7,6 @@ p,a{
     text-decoration:none;
     color:#fef5f0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
 }
 
 a{
@@ -15,12 +14,10 @@ a{
     margin-right: 12px;
 }
 
-h1{
-    text-align: center;
-    margin-top: 44px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #df4c30;
-    height: 100px;
+.logo{
+   position: relative;
+   left:300px;
+   top:24px
 }
 
 header{
@@ -30,16 +27,41 @@ header{
 
 .navbar{
     margin-left: 800px;
-    border-top: 10px;
+    position: relative;
+    top: 12px;
+}
+
+.slogan{
+    color: #DE3C15;
+    font-weight: bolder;
+    font-style: oblique;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    bottom: 84px;
 }
 
 body{
-    background-image: url('img/background.jpg');
-    background-size:1500px 600px;
+    height: 60vh;
+    background-image: url('img/background.png');
     background-repeat: no-repeat;
+    width: 100vw;
 }
+
 footer{
     background-color:#1f6b69;
-    height: 24vh;
-    margin-top: 372px;
+    height: 20vh;
+    margin-top: 136px;
+    /* align-items: center; */
+}
+
+.container-redes{
+    /* align-items: center; */
+    position: relative; 
+    left: 600px;
+    color: white;
+}
+
+.redes{
+    margin-right: 16px;
 }
