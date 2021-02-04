@@ -54,12 +54,6 @@ div img {
     background-color: #c44f00;
 }
 
-.container {
-    height: 500px;
-    text-align: center;
-    
-}
-
 .icone {
     height: 15px;
 }
@@ -91,12 +85,18 @@ div img {
 
 #container-para-comprar {
     background-color: #e7eb90;
-}
-
-#container-para-comprar>p {
+    height: 500px;
+    text-align: center;
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
+}
+
+.comecar{
+    text-align: center;
+    position: relative;
+    left: 130px;
+
 }
 
 
