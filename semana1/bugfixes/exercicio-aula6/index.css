@@ -48,10 +48,16 @@ div img {
     position: relative;
     top:200px;
     right: 280px;
+    box-shadow: 0 0 0 0;
+    border: none;
+    outline: none;
 }
 
 .botao-amarelo:hover {
     background-color: #c44f00;
+    box-shadow: 0 0 0 0;
+    border: none;
+    outline: none;
 }
 
 .icone {
