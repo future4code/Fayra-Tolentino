@@ -108,7 +108,9 @@ td button {
     height: 30px;
     border-radius: 5px;
     color: black;
-    margin-left: 250px;
+    /* margin-left: 250px; */
+    position: relative;
+    left: 48px;
 }
 
 .container-do-search {
