@@ -1,0 +1,25 @@
+/* Fase1 */
+#pond {
+    display: flex;
+  justify-content:flex-end;
+  }
+
+/* Fase 2 */
+#pond {
+    display: flex;
+  justify-content:center;
+  }
+
+/* Fase 3 */
+#pond {
+    display: flex;
+  justify-content:space-around;
+  }
+
+/* Fase 4 */
+#pond {
+    display: flex;
+  justify-content:space-between;
+  }
+
+/* Fase 5 */
