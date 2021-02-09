@@ -30,7 +30,7 @@ input{
     width: 300px;
     height: 24px;
     margin-right: 56px;
-    margin-top: 10px;
+    margin-top: 16px;
     border: none;
     border-radius:5px;
 }
@@ -95,5 +95,17 @@ h4{
 .video{
     height: 80vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #FF6348;
+    text-transform: uppercase;
+    padding-top: 48px;
+    font-size: x-large;
 }
 
+video{
+    margin-left: 364px;
+    margin-bottom: 96px;
+    outline: none;
+}
