@@ -17,7 +17,6 @@ nav{
     margin-top: 0;
     display: flex;
     padding: 0;
-     
 }
 
 .logo{
@@ -39,7 +38,7 @@ main{
     background-color:white;
     height: 80vh;
     width: 100vw;
-     grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4,1fr);
     /* row-gap: 20px;
     column-gap: 20px;
     display: grid;
@@ -88,5 +87,13 @@ h4{
     padding-left: 56px;
     text-transform:uppercase;
     font-size:small;
+}
+
+
+/* Estilização página video */
+
+.video{
+    height: 80vh;
+    width: 100vw;
 }
 
