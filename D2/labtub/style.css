@@ -16,9 +16,14 @@ nav{
      
 }
 main{
-    background-color: aqua;
-    height: 72vh;
+    background-color:white;
+    height: 80vh;
     width: 100vw;
+}
+
+p,h3{
+    margin-top: 10px;
+    text-align:right;
 }
 
 .grid-container{
@@ -34,10 +39,10 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    text-align:center;
-    padding-top: 16px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    text-align:right;
+    padding-top: 40px;
+    padding-right: 24px;
+    padding-bottom: 32px;
 }
 .img-card{
     width: 240px;
@@ -45,7 +50,7 @@ main{
 }
 footer{
     background-color: blueviolet;
-    height: 20vh;
+    height: 12vh;
     width: 100vw;
 }
 
