@@ -5,8 +5,10 @@ body {
     margin: 0;
     font-size: 10px;
     color: white;
+}
+
+div div{
     display: flex;
-    flex-direction: column
 }
 
 .green-background {
@@ -33,6 +35,11 @@ body {
     width: 50vw;
 }
 
+#vertical-middle-container{
+    flex-direction: column;
+   
+}
+
 .red-background {
     background-color: red;
     height: 12vh;
@@ -47,6 +54,6 @@ body {
 
 .purple-background {
     background-color: purple;
-    height: 5vh;
+    height: 10vh;
     width: 100vw;
 }
