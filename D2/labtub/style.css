@@ -13,12 +13,35 @@ nav{
     background-color: blue;
     height: 8vh;
     width: 100vw;
-    
+     
 }
 main{
     background-color: aqua;
     height: 72vh;
     width: 100vw;
+}
+
+.grid-container{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.music-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align:center;
+    padding-top: 16px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.img-card{
+    width: 240px;
+    height: 135px;
 }
 footer{
     background-color: blueviolet;
