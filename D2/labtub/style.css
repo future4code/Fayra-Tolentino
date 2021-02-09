@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+nav{
+    background-color: blue;
+    height: 8vh;
+    width: 100vw;
+    
+}
+main{
+    background-color: aqua;
+    height: 72vh;
+    width: 100vw;
+}
+footer{
+    background-color: blueviolet;
+    height: 20vh;
+    width: 100vw;
+}
+
