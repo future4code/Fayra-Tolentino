@@ -71,6 +71,11 @@ body {
     background-color: white;
     border: 1px solid black;
     height: 24vh;
-    width: 30vw;
+    width: 29.5vw;
     justify-content: center;
+}
+
+/* Aplicar responsividade */
+@media screen and (min-device-width:421px) and (max-device-width:800px){
+
 }
