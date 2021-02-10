@@ -72,16 +72,18 @@ body {
     background-color: white;
     border: 1px solid black;
     height: 24vh;
-    width: 29.5vw;
+    width: 30vw;
     justify-content: center;
-    margin-right: 19px; 
+    margin-right: 20px;
+    margin-left: 20px;  
 }
 
 .white-block10{
     background-color: white;
     border: 1px solid black;
     height: 24vh;
-    width: 29.5vw;
+    width: 30vw;
     justify-content: center;
-    margin-right: 20px; 
+    /* margin-right: 20px;
+    margin-left: 20px;   */
 }
