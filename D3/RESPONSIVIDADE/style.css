@@ -27,13 +27,14 @@ body {
     height: 24vh;
     width: 30vw;
     display: flex;
-    
+    margin-right: 20px;   
 }
 
 .yellow-block {
     background-color: yellow;
     height: 24vh;
     width: 30vw;
+    margin-right: 20px; 
 }
 
 .green-block {
