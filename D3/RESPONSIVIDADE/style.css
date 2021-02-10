@@ -10,7 +10,7 @@ body {
 
 #first-block {
     background-color: red;
-    height: 10vh;
+    height: 12vh;
     width: 100vw;
 }
 
@@ -22,23 +22,24 @@ body {
 
 .blue-block {
     background-color: blue;
-    height: 12vh;
-    width: 40vw;
+    height: 24vh;
+    width: 30vw;
     display: flex;
-
+    margin: 20px;
 }
 
 .yellow-block {
     background-color: yellow;
-    height: 12vh;
-    width: 40%;
-
+    height: 24vh;
+    width: 30vw;
+    margin: 20px;
 }
 
 .green-block {
     background-color: green;
-    height: 12vh;
-    width: 40%;
+    height: 24vh;
+    width: 30vw;
+    margin: 20px;
 }
 
 .black-block {
@@ -46,6 +47,7 @@ body {
     color: white;
     height: 44vh;
     width: 40%;
+    margin: 20px;
 }
 
 .white-block {
@@ -53,4 +55,5 @@ body {
     height: 12vh;
     width: 30vw;
     border: 1px solid black;
+    margin: 20px;
 }
