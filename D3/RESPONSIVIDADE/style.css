@@ -49,6 +49,7 @@ body {
     height: 40vw;
     width: 40vw;
     justify-content: center;
+    margin-right: 20px; 
 }
 
 .white-block {
@@ -57,4 +58,5 @@ body {
     height: 24vh;
     width: 30vw;
     justify-content: center;
+    margin-right: 20px; 
 }
