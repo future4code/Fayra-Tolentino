@@ -52,8 +52,8 @@ body {
 
 .white-block {
     background-color: white;
-    height: 12vh;
-    width: 30vw;
     border: 1px solid black;
+    height: 24vh;
+    width: 30vw;
     margin: 20px;
 }
