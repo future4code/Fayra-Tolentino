@@ -1,4 +1,3 @@
-
 body {
     width: 100vw;
     max-width: 100vw;
@@ -6,14 +5,11 @@ body {
     padding: 0;
     margin: 0;
 }
-
-
 #first-block {
     background-color: red;
     height: 12vh;
     width: 100vw;
 }
-
 .column{
     display: flex;
     flex-direction: row;
@@ -21,7 +17,6 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
-
 .blue-block {
     background-color: blue;
     height: 24vh;
@@ -29,20 +24,17 @@ body {
     display: flex;
     margin-right: 20px;   
 }
-
 .yellow-block {
     background-color: yellow;
     height: 24vh;
     width: 30vw;
     margin-right: 20px; 
 }
-
 .green-block {
     background-color: green;
     height: 24vh;
     width: 30vw;
 }
-
 .black-block7 {
     background-color: black;
     color: white;
@@ -51,7 +43,6 @@ body {
     justify-content: center;
     margin-right: 20px; 
 }
-
 .black-block8 {
     background-color: black;
     color: white;
@@ -60,7 +51,6 @@ body {
     justify-content: center;
     margin-left:20px; 
 }
-
 .column-white{
     display: flex;
     flex-direction: row;
@@ -75,15 +65,12 @@ body {
     width: 30vw;
     justify-content: center;
     margin-right: 20px;
-    margin-left: 20px;  
+    margin-left: 19px;  
 }
-
 .white-block10{
     background-color: white;
     border: 1px solid black;
     height: 24vh;
     width: 30vw;
     justify-content: center;
-    /* margin-right: 20px;
-    margin-left: 20px;   */
 }
