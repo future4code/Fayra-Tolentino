@@ -43,13 +43,22 @@ body {
     width: 30vw;
 }
 
-.black-block {
+.black-block7 {
     background-color: black;
     color: white;
-    height: 40vw;
-    width: 40vw;
+    height: 70vh;
+    width: 45vw;
     justify-content: center;
     margin-right: 20px; 
+}
+
+.black-block8 {
+    background-color: black;
+    color: white;
+    height: 70vh;
+    width: 45vw;
+    justify-content: center;
+    margin-left:20px; 
 }
 
 .white-block {
