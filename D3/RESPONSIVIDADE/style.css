@@ -61,11 +61,27 @@ body {
     margin-left:20px; 
 }
 
+.column-white{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+    margin-top: 20px;
+}
 .white-block {
     background-color: white;
     border: 1px solid black;
     height: 24vh;
-    width: 30vw;
+    width: 29.5vw;
+    justify-content: center;
+    margin-right: 19px; 
+}
+
+.white-block10{
+    background-color: white;
+    border: 1px solid black;
+    height: 24vh;
+    width: 29.5vw;
     justify-content: center;
     margin-right: 20px; 
 }
