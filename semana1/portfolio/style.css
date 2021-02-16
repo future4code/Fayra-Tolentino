@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    width: 100vw;
+    height: 12vh;
+    background-color: #FF6348;
+    margin-top: 19px;
+}
+
+main{
+    width: 100vw;
+    height:200vh;
+}
+
+.sec1{
+    width: 100vw;
+    height: 72vh;
+    background-color: #BFBFBF;
+    margin-top:80px;
+}
+
+.sec2{
+    width: 100vw;
+    height: 132vh;
+    background-color: ;
+}
+
+footer{
+    width: 100vw;
+    height:20vh;
+    background-color: #1E1F21;
+}
