@@ -1,0 +1,27 @@
+li:first-of-type {
+    font-size: 3rem;
+}
+
+li:nth-child(2){
+    padding: 2em 0 2em 0;
+}
+
+li:nth-child(3){
+    height: 30vh;
+}
+
+li:last-of-type {
+    height: 50vh;
+}
+
+p:first-of-type {
+    font-size: 70%;
+}
+
+p:nth-child(2) {
+    width: 10em;
+}
+
+p:nth-child(3) {
+    height: 10%;
+}

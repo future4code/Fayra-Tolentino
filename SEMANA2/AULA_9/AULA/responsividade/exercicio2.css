@@ -1,0 +1,36 @@
+span {
+    height: 20vh;
+    width: 30vw;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 420px) {
+    .container {
+        color: red;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+    span {
+        align-items: start;
+    }
+}
+    
