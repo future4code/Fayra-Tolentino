@@ -114,6 +114,18 @@ console.log(comidasFavoritas[4]);
 
 // c) Aqui vai um desafio: pergunte ao usuário uma comida preferida. Troque a segunda comida da sua lista pela inserida pelo usuário.
 // Imprima na tela a nova lista
+var comidasFavoritas = ["lasanha de beringela","manjar" , "suco de laranja", "canjica", "salada de tomate"]
+var mudarComida = prompt ("Qual sua comida favorita?")
+console.log("Essas são nossas comidas favoritas: ");
+console.log(comidasFavoritas[0]);
+console.log(mudarComida);
+console.log(comidasFavoritas[2]);
+console.log(comidasFavoritas[3]);
+console.log(comidasFavoritas[4]);
+
+// --------------------------------------------------------------------------------------------------------------------------------------
+// 4. Faça um programa que contenha um array com 3 perguntas de Sim ou Não, armazenado em uma variável. Por exemplo: 
+// "Você está usando uma roupa azul hoje?". Depois, siga os passos:
 
 
 
