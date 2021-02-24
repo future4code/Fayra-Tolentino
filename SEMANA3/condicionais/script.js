@@ -208,7 +208,19 @@
 // outra pergunta sobre o preço do ingresso, então verifique se seu amigo ou amiga vai topar assistir o filme. Caso positivo, 
 // imprima no console a mensagem: "Bom filme!", caso contrário, imprima "Escolha outro filme :("
 
-let 
+let genero = prompt("Qual o genêro do filme?");
+let preco = prompt("Quanto custa o ingresso?");
+let conversao = Number(preco);
+
+if (genero === "suspense" && conversao === 15){
+    console.log("Bom fime!");
+}else if (conversao > 15){
+    console.log("Ingreço caro, escolha outro filme!");
+}else if (genero !== "suspense"){
+    console.log("Genêro errado, escolha outro filme!");
+}else{
+    console.log("Coloque um genero e valor adequado");
+}
 
 
 
