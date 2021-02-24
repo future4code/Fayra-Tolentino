@@ -169,22 +169,46 @@
 // EXERCÍCIO 6
 
 // Repita o exercício anterior, mas utilizando a estrutura de `switch case` agora
-let turno = prompt("Digite seu turno!\nM para matutino\nV para vespertino\nN para noturno");
-switch(turno){
-    case(turno === "m"||turno ==="M"):
-        console.log("Bom dia! Bem Vind@ a mais um dia de aula!");
-    break
-    case(turno === "t"||turno ==="T"):
-        console.log("Boa tarde! Bem Vind@ a mais um dia de aula!");
-    break
-    case( turno === "n"||turno ==="N"):
-        console.log("Boa noite! Bem Vind@ a mais um dia de aula!");
-    break
-    default:
-        console.log("Insira um turno válido!")
-}
+// let turno = prompt("Digite seu turno!\nM para matutino\nV para vespertino\nN para noturno");
+// switch(turno){
+//     case(turno ="m"):
+//         console.log("Bom dia! Bem Vind@ a mais um dia de aula!");
+//     break
+//     case(turno ="t"):
+//         console.log("Boa tarde! Bem Vind@ a mais um dia de aula!");
+//     break
+//     case( turno = "n"):
+//         console.log("Boa noite! Bem Vind@ a mais um dia de aula!");
+//     break
+//     default:
+//         console.log("Insira um turno válido!")
+// } => NO SWITCH NÃO PRECISA ATRIBUIR O VALOR DENTRO DELE, SÓ COLOCAR AS POSSIBILIDADES DE CASO
 
+// CÓDIGO CERTO:
+// let turno = prompt("Digite seu turno!\nM para matutino\nV para vespertino\nN para noturno");
+// switch(turno){
+//     case "m":
+//         console.log("Bom dia! Bem Vind@ a mais um dia de aula!");
+//     break
+//     case "t":
+//         console.log("Boa tarde! Bem Vind@ a mais um dia de aula!");
+//     break
+//     case "n":
+//         console.log("Boa noite! Bem Vind@ a mais um dia de aula!");
+//     break
+//     default:
+//         console.log("Insira um turno válido!")
+// }
+// -------------------------------------------------------------------------------------
 
+// EXERCÍCIO 7
+
+// Considere a situação: você vai no cinema com um amigo ou amiga, porém ele/ela só assiste filme do gênero fantasia ****e 
+// se o ingresso está abaixo de 15 reais. Faça um código que pergunta ao usuário qual o gênero de filme que vão assistir e 
+// outra pergunta sobre o preço do ingresso, então verifique se seu amigo ou amiga vai topar assistir o filme. Caso positivo, 
+// imprima no console a mensagem: "Bom filme!", caso contrário, imprima "Escolha outro filme :("
+
+let 
 
 
 
