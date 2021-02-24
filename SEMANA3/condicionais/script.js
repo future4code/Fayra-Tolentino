@@ -208,19 +208,49 @@
 // outra pergunta sobre o preço do ingresso, então verifique se seu amigo ou amiga vai topar assistir o filme. Caso positivo, 
 // imprima no console a mensagem: "Bom filme!", caso contrário, imprima "Escolha outro filme :("
 
+// let genero = prompt("Qual o genêro do filme?");
+// let preco = prompt("Quanto custa o ingresso?");
+// let conversao = Number(preco);
+
+// if (genero === "suspense" && conversao === 15){
+//     console.log("Bom fime!");
+// }else if (conversao > 15){
+//     console.log("Ingreço caro, escolha outro filme!");
+// }else if (genero !== "suspense"){
+//     console.log("Genêro errado, escolha outro filme!");
+// }else{
+//     console.log("Coloque um genero e valor adequado");
+// }
+
+// ---------------------------------------------------------------------------------------------------------------
+// DESAFIOS
+// 1.Modifique o código do exercício 7 para, antes de imprimir a mensagem "Bom filme!", 
+// pergunte ao usuário, pelo prompt que snack ele vai comprar (pipoca, chocolate, doces, etc) e 
+// imprima no console as mensagens "Bom filme!" e "... com [SNACK]", trocando [SNACK] pelo que o usuário colocou no input.
+
 let genero = prompt("Qual o genêro do filme?");
 let preco = prompt("Quanto custa o ingresso?");
 let conversao = Number(preco);
+let snack = prompt("Qual snack você deseja?")
 
-if (genero === "suspense" && conversao === 15){
-    console.log("Bom fime!");
-}else if (conversao > 15){
+// if (genero === "suspense" && conversao === 15){
+//     console.log("Bom fime!");
+// }else if (conversao > 15){
+//     console.log("Ingreço caro, escolha outro filme!");
+// }else if (genero !== "suspense"){
+//     console.log("Genêro errado, escolha outro filme!");
+// }else{
+//     console.log("Coloque um genero e valor adequado");
+// }
+
+if (conversao > 15){
     console.log("Ingreço caro, escolha outro filme!");
 }else if (genero !== "suspense"){
     console.log("Genêro errado, escolha outro filme!");
-}else{
-    console.log("Coloque um genero e valor adequado");
+}else if (genero === "suspense" && conversao === 15){
+    console.log("Bom fime! E aproveite o seu " + snack);
 }
+
 
 
 
