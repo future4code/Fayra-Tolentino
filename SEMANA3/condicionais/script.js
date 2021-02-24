@@ -102,13 +102,90 @@
 // no console se ele/ela pode dirigir (apenas maiores de idade).
 
 // 1. Faça um `prompt` para receber a idade do usuário e guarde em uma variável.
-let idade = prompt("Insira sua idade");
+// let idade = prompt("Insira sua idade");
 // 2. Garanta que essa variável é do tipo `Number`, você deve usar o cast para number para isso.
-let numero = Number(idade);
+// let numero = Number(idade);
 // 3. Agora veja se essa idade do usuário corresponde à idade mínima que permite dirigir. Se sim, 
 // imprima no console  `"Você pode dirigir"`, caso contrário, imprima `"Você não pode dirigir."`
-if(numero >=18){
-    console.log("Você pode dirigir");
-}else{
-    console.log("Você é menor de idade, portanto não pode dirigir =(!");
+// if(numero >=18){
+//     console.log("Você pode dirigir");
+// }else{
+//     console.log("Você é menor de idade, portanto não pode dirigir =(!");
+// }
+
+// let idade = prompt("Insira sua idade");
+// let numero = Number(idade);
+// if(numero >=18){
+//     console.log("Você pode dirigir");
+// }else{
+//     console.log("Você é menor de idade, portanto não pode dirigir =(!");
+// }
+
+// -------------------------------------------------------------------------------------------
+// EXERCÍCIO 5
+
+// Agora faça um programa que verifica que turno do dia um aluno estuda. Peça para digitar **M** (matutino) 
+// ou **V** (Vespertino) ou **N** (Noturno). Imprima no console a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!". Utilize o bloco `if/else`
+
+// let turno = prompt("Digite seu turno!\nM para matutino\nV para vespertino\nN para noturno");
+// if(turno = m || turno = M){
+//     console.log("Bom dia! Bem Vind@ a mais um dia de aula!");
+// }else if( turno = v || turno=V){
+//     console.log("Boa tarde! Bem Vind@ a mais um dia de aula!");
+// }else if( turno = n || turno=N){
+//     console.log("Boa noite! Bem Vind@ a mais um dia de aula!");
+// }else{
+//     console.log("Insira um turno válido!")
+// }
+
+// let turno = prompt("Digite seu turno!\nM para matutino\nV para vespertino\nN para noturno");
+// // let manha;
+// // let tarde;
+// // let noite;
+// if(turno === "m"||turno ==="M"){
+//     console.log("Bom dia! Bem Vind@ a mais um dia de aula!");
+// }else if(turno === "t"||turno ==="T"){
+//     console.log("Boa tarde! Bem Vind@ a mais um dia de aula!");
+// }else if( turno === "n"||turno ==="N"){
+//     console.log("Boa noite! Bem Vind@ a mais um dia de aula!");
+// }else{
+//     console.log("Insira um turno válido!")
+// }
+
+
+// let turno = prompt("Digite seu turno!\nM para matutino\nV para vespertino\nN para noturno");
+
+// if(turno = "m"){
+//     console.log("Bom dia! Bem Vind@ a mais um dia de aula!");
+// }else if(turno = "v" ){
+//     console.log("Boa tarde! Bem Vind@ a mais um dia de aula!");
+// }else if( turno = "n"){
+//     console.log("Boa noite! Bem Vind@ a mais um dia de aula!");
+// }else{
+//     console.log("Insira um turno válido!")
+// }
+
+// --------------------------------------------------------------------------
+// EXERCÍCIO 6
+
+// Repita o exercício anterior, mas utilizando a estrutura de `switch case` agora
+let turno = prompt("Digite seu turno!\nM para matutino\nV para vespertino\nN para noturno");
+switch(turno){
+    case(turno === "m"||turno ==="M"):
+        console.log("Bom dia! Bem Vind@ a mais um dia de aula!");
+    break
+    case(turno === "t"||turno ==="T"):
+        console.log("Boa tarde! Bem Vind@ a mais um dia de aula!");
+    break
+    case( turno === "n"||turno ==="N"):
+        console.log("Boa noite! Bem Vind@ a mais um dia de aula!");
+    break
+    default:
+        console.log("Insira um turno válido!")
 }
+
+
+
+
+
+
