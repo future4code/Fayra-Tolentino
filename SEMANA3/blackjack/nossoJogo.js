@@ -11,10 +11,19 @@
  * 
  */
 
-// 1 - Imprime uma mensagem no console "Bem vindo ao jogo de Blackjack!".
+// 1 - Imprime uma mensagem no console "Bem vindo ao jogo de Blackjack!";
+// 2. Envia um confirm, perguntando ao usuário: "Quer iniciar uma nova rodada?";
+// 3 - Se o usuário responder `cancel`, imprime uma mensagem no console "O jogo acabou".
+// 4 - Se o usuário responder `Ok`, o programa deve iniciar uma nova rodada.
 
 let welcome = alert("Bem Vind@ ao jogo de Blackjack\n Façam suas apostas!");
 let iniciar =  window.confirm("Quer iniciar uma nova rodada?");
 if(welcome === undefined){
    iniciar;
+}if( iniciar === false){
+   alert("O jogo acabou :( !");
+}else{
+   console.log("talvez tenha dado certo!")
 }
+
+
