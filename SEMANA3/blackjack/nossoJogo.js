@@ -10,3 +10,11 @@
  * 
  * 
  */
+
+// 1 - Imprime uma mensagem no console "Bem vindo ao jogo de Blackjack!".
+
+let welcome = alert("Bem Vind@ ao jogo de Blackjack\n Façam suas apostas!");
+let iniciar =  window.confirm("Quer iniciar uma nova rodada?");
+if(welcome === undefined){
+   iniciar;
+}
