@@ -132,4 +132,40 @@ function repeticao (texto){
     }
 }
 
+// ********************************************************************************************************************************
+
+// 6. Para os itens a seguir, considere o seguinte array para os seus testes:
+const arrayTeste = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+
+// a. Escreva uma função que receba um array de números e devolva a quantidade de elementos nele;
+// b. Escreva uma função que receba um número e devolva um booleano indicando se ele é par ou não;
+// c. Escreva uma função que receba um array de números e devolva a quantidade de números pares dentro dele;
+// d. Reescreva seu código anterior (do item c) de tal forma que ele utilize a função do item b para verificar se o número é par;
+
+// a . 
+function quantidade(){
+    const arrayTeste = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+} console.log(arrayTeste.length)
+
+// b. 
+function validacao(){
+    const arrayTeste = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+    for (let i = 0; i < arrayTeste.length; i++) {
+        console.log(array[i])
+}
+
+function validacao(array){
+    const arrayTeste = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22];
+    for (let x of arrayTeste) {
+		if (x % 2 === 0) {
+	    console.log ("é par")
+		}
+  }
+}
+
+function validacao(array){
+    const arrayTeste = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22];
+    for (let i = 0; i < arrayTeste.length; i++)  {
+		
+}
 // ------------------------------------------------------- ----DESAFIOS DE CÓDIGO ------------------------------------------------
