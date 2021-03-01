@@ -80,19 +80,18 @@
 // }
 
 // b .
-
-function identidade (nome,idade, endereco, boolean){
     let nome = prompt("Qual o seu nome?");
     let idade = prompt("Qual a sua idade?");
     let endereco = prompt("Digite o seu endereço : ");
     let boolean = confirm("Você é estudante ? Okay para sim, cancelar para não");
 
+function identidade (nome,idade, endereco, boolean){
     if (boolean == true){
         console.log("Sou estudante");
     }else{
         console.log("Eu não sou estudante!")
     }
 }
-    console.log(" Eu sou ", nome, "tenho ", idade , ", " , "moro em ", endereco , " e ", boolean),
+    console.log(" Eu sou ", nome, "tenho ", idade , ", " , "moro em ", endereco , " e ", boolean)
 
 // ------------------------------------------------------- ----DESAFIOS DE CÓDIGO ------------------------------------------------
