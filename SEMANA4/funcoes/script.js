@@ -80,18 +80,56 @@
 // }
 
 // b .
-    let nome = prompt("Qual o seu nome?");
-    let idade = prompt("Qual a sua idade?");
-    let endereco = prompt("Digite o seu endereço : ");
-    let boolean = confirm("Você é estudante ? Okay para sim, cancelar para não");
+//     let nome = prompt("Qual o seu nome?");
+//     let idade = prompt("Qual a sua idade?");
+//     let endereco = prompt("Digite o seu endereço : ");
+//     let boolean = confirm("Você é estudante ? Okay para sim, cancelar para não");
 
-function identidade (nome,idade, endereco, boolean){
-    if (boolean == true){
-        console.log("Sou estudante");
-    }else{
-        console.log("Eu não sou estudante!")
+// function identidade (nome,idade, endereco, boolean){
+//     if (boolean == true){
+//         console.log("Sou estudante");
+//     }else{
+//         console.log("Eu não sou estudante!")
+//     }
+// }
+//     console.log(" Eu sou ", nome, "tenho ", idade , ", " , "moro em ", endereco , " e ", boolean)
+
+// *******************************************************************************************************************************************
+
+// 5.Escreva as funções explicadas abaixo:
+
+// a . Escreva uma função que receba 2 números como parâmetros, e, dentro da função, faça a soma das duas entradas e 
+// retorne o resultado. Invoque a função e imprima no console o resultado.
+// b . Faça uma função que recebe 2 números e retorne um booleano que informa se o primeiro número é maior ou igual ao segundo.
+// c. Faça uma função que recebe uma mensagem (string) como parâmetro e imprima essa mensagem 10 vezes. (não é permitido escrever 
+// 10 console.log dentro da função, use outra estrutura de código para isso).
+
+// a .
+function soma(n1,n2){
+   let operacao = n1 +n2;
+   return operacao
+}
+
+// b. 
+function confirmacao (n3,n4){
+    if(n3 >= n4){
+        console.log("O primeiro número ", n3, "é maior que ", n4);
+    }else {
+        console.log("O primeiro número ", n3, " não é maior que ", n4);
     }
 }
-    console.log(" Eu sou ", nome, "tenho ", idade , ", " , "moro em ", endereco , " e ", boolean)
+
+// c . ?????? (COMO FAZER)
+function repeticao (texto){
+    let texto = "Essa sentença se repetirá 10 vezes";
+    return (texto*10)
+}
+
+let texto = "Essa sentença se repetirá 10 vezes";
+function repeticao (texto){
+    for (i = 0; i < 11; i++){
+        return texto *10
+    }
+}
 
 // ------------------------------------------------------- ----DESAFIOS DE CÓDIGO ------------------------------------------------
