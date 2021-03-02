@@ -9,11 +9,15 @@
 function criarNovaTarefa(){
     const gerarTarefa = document.getElementById("gerar-tarefa");
     // console.log("tenho o Dom!")
-    const minhaTarefa = document.getElementById("tarefa").value;;
-    console.log(minhaTarefa);
+    const minhaTarefa = document.getElementById("tarefa").value;
+    // console.log(minhaTarefa);
     const diasSemana = document.getElementById("dias-semana").value;
-    console.log(diasSemana)
-    
-
+    // console.log(diasSemana)
+    let comparacao = document.querySelectorAll('.semana > div')
+    if(minhaTarefa == comparacao ){
+    minhaTarefa.innerHTML += `<li>${minhaTarefa.value}</li>`
+    console.log("passou pelo primeiro")
+    minhaTarefa.value=""
+    console.log("passou pelo segundo")
 }
-
+}
