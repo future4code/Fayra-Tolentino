@@ -1,0 +1,240 @@
+1. Observe a primeira div do HTML, a que tem um id chamado "cadastro". Veja tudo o que tem dentro dela.
+
+<div id='cadastro'>
+        <p>Cadastrar Despesa</p>
+        <input id="valorCadastro" type="number" placeholder="Valor da Despesa">
+        <select id="tipoCadastro">
+            <option value="" disabled selected>Selecione um tipo</option>
+            <option value="alimentação">Alimentação</option>
+            <option value="utilidades">Utilidades</option>
+            <option value="viagem">Viagem</option>
+        </select>
+        <input id="descricaoCadastro" type="text" placeholder="Descrição">
+        <button onclick="adicionarDespesa()">Adicionar</button>
+</div>
+
+A primeira div do código vai determinar a primeira seção  onde é possível o usuário registrar seus gastos, escolher o tipo de despesa e descrção 
+dessa despesa. Esses dados poderão ser introduzidos quando o usuário clicar o botão, com isso, no clique será ativado a função adicionarDespesa()
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+2. É essa a div responsável por conter os campos de formulário para cadastro de uma nova despesa. Dentro dela, há três campos:
+
+    - um input para que o usuário coloque o valor da despesa
+    <input id="valorCadastro" type="number" placeholder="Valor da Despesa">
+
+    - um select para que o usuário escolha o tipo da despesa. Nesse select há as opções de "Alimentação", "Utilidades" e " Viagens".
+    <select id="tipoCadastro">
+            <option value="" disabled selected>Selecione um tipo</option>
+            <option value="alimentação">Alimentação</option>
+            <option value="utilidades">Utilidades</option>
+            <option value="viagem">Viagem</option>
+        </select>
+
+    - um input para que o usuário coloque uma descrição da despesa
+    <input id="descricaoCadastro" type="text" placeholder="Descrição">
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+3. Além disso, ainda dentro da div cadastro, há o botão de criar a despesa, chamado "Adicionar". Ele chama, no método `onclick`,
+ a função `adicionarDespesa()`(não é necessário ver o que essa função faz agora, daqui a pouco falaremos sobre ela).
+
+ <button onclick="adicionarDespesa()">Adicionar</button>
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+4. Agora, algumas linhas mais abaixo, observe a declaração dessa função imprimirDespesas. Lá, você vai reparar que, por enquanto, 
+essa função não está fazendo nada com o parâmetro. Daqui a pouco, porém, você verá que ela será a responsável por imprimir todas 
+as despesas do array na tela, dentro da div "despesas". Isso será feito na parte de implementação de código. 
+
+// PRIMEIRO
+function imprimirDespesas(despesas){
+    let divDespesas = document.getElementById('despesas')
+    divDespesas.innerHTML = '<p><u>Despesas Detalhadas</u></p>'
+
+    // AQUI VEM A IMPLEMENTAÇÃO
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+5.  Por enquanto, o que você deve perceber é que a única coisa que a função faz é pegar a div com id "despesas" do HTML 
+(primeira linha da função), por meio do `getElementById`, e incluir dentro da div, por meio do `innerHTML`, 
+uma tag <p> escrita "Despesas Detalhadas".
+
+<div id="despesas"></div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+6. Volte na terceira linha do código. Nela está a invocação da função `imprimirExtrato`.
+
+let arrDespesas = []
+imprimirDespesas(arrDespesas)
+imprimirExtrato()
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+7. Algumas linhas mais abaixo, está a declaração desse função. Dê uma olhada nessa declaração.
+
+function imprimirExtrato(){
+    let divExtrato = document.getElementById('extrato')
+    let gastoTotal = 0
+    let gastoAlimentacao = 0
+    let gastoUtilidades = 0
+    let gastoViagem = 0
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+8. Você vai ver, na parte de implementação de código, que essa função será responsável por pegar o array de despesas da linha 1 do código e, 
+a partir de verificações de cada tipo de despesa (alimentação, utilidade ou viagem), somar o total separado de cada tipo, além de somar os
+ gastos de todas as despesas juntas. O total gasto com alimentação será guardado na variável `gastoAlimentacao`; o total gasto com utilidades, 
+ na variável `gastoUtilidade`; o total gasto com viagem, na variável `gastoViagem`; e a soma de todas as despesas, na variável `gastoTotal`.
+
+ function adicionarDespesa(){
+    let valorCdt = document.getElementById('valorCadastro')
+    let tipoCtd = document.getElementById('tipoCadastro')
+    let descricaoCtd = document.getElementById('descricaoCadastro')
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+9. Por enquanto, porém, há apenas as declarações dessas variáveis citadas no passo anterior (7), a captura da div com id "extrato" do HTML, 
+por meio do `getElementById`, com inclusão na div, por meio do `innerHTML`, de uma tag <p> com um texto que identifica todos os 
+gastos guardados pelas variáveis citadas no passo anterior.
+
+function imprimirExtrato(){
+    let divExtrato = document.getElementById('extrato')
+    let gastoTotal = 0
+    let gastoAlimentacao = 0
+    let gastoUtilidades = 0
+    let gastoViagem = 0
+
+<div id="extrato"></div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+10. Depois, vem a função `limparFiltros`, que é responsável por limpar os campos da seção de "Filtrar Despesa".
+
+<button onclick="limparFiltros()">Limpar</button>
+
+function limparFiltros() {
+    document.getElementById('tipoFiltro').value = ""
+    document.getElementById('valorFiltroMin').value = ""
+    document.getElementById('valorFiltroMax').value = ""
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+11. Agora, pedimos para que você dê um pulo no final do arquivo js. Lá nas últimas linhas, há três funções de validação, 
+chamadas: `validarValor`, `validarTipo` e `validarDescricao`.
+
+12. Não precisa se preocupar em entender como funcionam essas funções. O importante é apenas você saber que elas servem para validar
+ os campos dos inputs de formulário para cadastrar uma nova despesa.  Elas recebem como parâmetro os valores dos inputs colocados no 
+ cadastro de despesas do HTML e retornam um `true` ou `false`. Se retornar true, é por que o usuário colocou um campo válido no formulário. 
+ Se retornar false, é pq o usuário colocou um campo inválido, como um número negativo ou um campo em branco, por exemplo. Essas três funções 
+ serão chamadas dentro da função `adicionarDespesa`, que passaremos a explicar a seguir, no próximo passo 👇
+
+function validarValor(valor){
+    if(valor.value.length > 0 && parseInt(valor.value) > 0){
+        return true
+    }
+    return false
+}
+
+function validarTipo(tipo){
+    if(tipo.value !== ""){
+        return true
+    }
+    return false
+}
+
+function validarDescricao(texto){
+    if(texto.value.replace(/ /g,"").length !== 0){
+        return true
+    }
+    return false
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+13. A função `adicionarDespesa` é chamada no clique do botão "Adicionar".
+
+14. Ela é responsável por criar um objeto com as propriedades de uma despesa (valor, tipo, descricao), a partir do que o 
+usuário digitou no formulário, e adicionar esse objeto no array de despesas (`arrDespesas`) da linha 1.
+
+15. Para isso, a função, primeiro, pega os valores digitados pelo usuário no formulário cadastro de despesas do HTML, 
+por meio do `getElementById` (três primeiras linhas da função).
+
+<button onclick="adicionarDespesa()">Adicionar</button>
+
+function adicionarDespesa(){
+    let valorCdt = document.getElementById('valorCadastro')
+    let tipoCtd = document.getElementById('tipoCadastro')
+    let descricaoCtd = document.getElementById('descricaoCadastro')
+
+    if(validarValor(valorCdt) && validarTipo(tipoCtd) && validarDescricao(descricaoCtd)){
+        let novaDespesa = {
+            valor: Number(valorCdt.value),
+            tipo: tipoCtd.value,
+            descricao: descricaoCtd.value,
+        }
+
+        arrDespesas.push(novaDespesa)
+        
+        valorCdt.value = ""
+        tipoCtd.value = ""
+        descricaoCtd.value = ""
+
+        
+        limparFiltros()
+        imprimirDespesas(arrDespesas)
+        imprimirExtrato()
+    } else {
+        alert("`Faltou algum valor ou algum valor é um número negativo`")
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+16. Depois, há a verificação se o usuário digitou valores válidos no form, por meio do `if` com as funções `validarValor`, 
+`validarTipo` e `validarDescricao` (explicadas nos passos 9 e 10) nas condicionais do if.
+
+if(validarValor(valorCdt) && validarTipo(tipoCtd) && validarDescricao(descricaoCtd))
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+17. Caso o usuário coloque valores válidos no form, a função entra no if e, nessa ordem: 
+    - cria uma variável chamada `novaDespesa`, que guarda justamente uma nova despesa com as informações do que o 
+    usuário preencheu no form;
+    - adiciona essa `novaDespesa` no array de despesas (`arrDespesas`) por meio do push;
+    - limpa os campos do formulário;
+    - chama a função `limparFiltros` (explicada no passo 9);
+    - chama a função `imprimirDespesas` (explicada nos passos 3 a 5) para atualizar as despesas impressas na div "despesas" 
+    do HTML com a nova despesa adicionada;
+    - chama a função `imprimirExtrato` (explicada nos passos 6 a 8) para atualizar o extrato impresso na div "extrato" do 
+    HTML com a nova despesa adicionada.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+18. Caso o usuário não coloque valores válidos no form, a função entra no else e imprime essa frase para o usuário: 
+"Faltou algum valor ou algum valor é um número negativo".
+
+ else {
+        alert("`Faltou algum valor ou algum valor é um número negativo`")
+    }
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+19. Por fim, a função `filtrarDespesas` deveria ser a responsável por pegar os valores da seção de filtros, e filtrar as despesas 
+que estão renderizadas na div "despesas" a partir dos filtros que o usuário preencher.
+
+20. E a gente diz deveria, por que ainda falta uma implementação nela, para que esse filtro funcione. 
+Isso, vamos ver na parte de implementação, logo mais abaixo. (falta o filter)
+
+21. Por enquanto, ela apenas está usando o `getElementById` em cada input de filtro para pegar os valores colocados pelo usuário.
+
+function filtrarDespesas(){
+    let tipoFiltro = document.getElementById('tipoFiltro').value
+    let valorMin = Number(document.getElementById('valorFiltroMin').value)
+    let valorMax = Number(document.getElementById('valorFiltroMax').value)
+
+
+    let despesasFiltradas // AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
+
+    imprimirDespesas(despesasFiltradas)
+}
+
+<div id="despesas"></div>
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
