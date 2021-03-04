@@ -9,6 +9,9 @@ function imprimirDespesas(despesas){
     divDespesas.innerHTML = '<p><u>Despesas Detalhadas</u></p>'
 
     // AQUI VEM A IMPLEMENTAÇÃO
+    despesas.forEach((despesa) => {
+        divDespesas.innerHTML += `<p>valor: R$ ${despesa.valor} | tipo: ${despesa.tipo} | descrição: ${despesa.descricao} </p> `
+    })
 }
 
 
