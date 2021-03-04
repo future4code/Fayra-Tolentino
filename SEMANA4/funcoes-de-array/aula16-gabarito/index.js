@@ -9,6 +9,7 @@ function imprimirDespesas(despesas){
     divDespesas.innerHTML = '<p><u>Despesas Detalhadas</u></p>'
 
     // AQUI VEM A IMPLEMENTAÇÃO
+    // da função imprimir despesas, imprimir um valor para cada item do parâmetro dispesas
     despesas.forEach((despesa) => {
         divDespesas.innerHTML += `<p>valor: R$ ${despesa.valor} | tipo: ${despesa.tipo} | descrição: ${despesa.descricao} </p> `
     })
@@ -22,9 +23,20 @@ function imprimirExtrato(){
     let gastoAlimentacao = 0
     let gastoUtilidades = 0
     let gastoViagem = 0
-
-
     // AQUI VEM A IMPLEMENTAÇÃO
+    // para cada elemento que entrar no array a partir de x você vai por o valor no array
+    arrDespesas.forEach((despesa)=>{
+    // += pega o valor atual, mais oq vc tá pondo de despesa
+    // despesa.valor não têm uma condição existente
+    gastoTotal += despesa.valor 
+    if(despesa.tipo === "alimentação"){
+        gastoAlimentacao += despesa.valor
+    }else if (despesa.tipo === "utilidades"){
+        gastoUtilidades += despesa.valor
+    }else if (despesa.tipo === "viagem" ){
+        gastoViagem +=  despesa.valor
+    }
+    }) 
 
     divExtrato.innerHTML = `<p>Extrato: Gasto Total: R$${gastoTotal} | Alimentação: R$${gastoAlimentacao} | 
                                         Utilidades: R$${gastoUtilidades} | Viagem: R$${gastoViagem}</p>`
@@ -52,7 +64,7 @@ function adicionarDespesa(){
         }
 
         arrDespesas.push(novaDespesa)
-        
+        // zeram os campos quando incluir valores despesas e extratos
         valorCdt.value = ""
         tipoCtd.value = ""
         descricaoCtd.value = ""
