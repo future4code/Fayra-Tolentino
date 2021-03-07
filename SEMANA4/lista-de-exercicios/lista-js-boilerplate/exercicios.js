@@ -1,8 +1,11 @@
 //Exercício 1
 
+const array = [0, 8, 23, 16, 10, 15, 41, 12, 13];
 function inverteArray(array) {
-   // implemente sua lógica aqui
-}
+   array.reverse()
+   return array
+};
+
 
  //Exercício 2
 
