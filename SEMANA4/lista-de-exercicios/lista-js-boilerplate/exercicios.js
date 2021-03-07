@@ -5,7 +5,7 @@ const numbers = [0, 8, 23, 16, 10, 15, 41, 12, 13];
 function inverteArray(numbers) {
   //  sua lógica aqui
    numbers.reverse()
-   console.log(numbers)   
+   return numbers  
 };
 // } 
 
@@ -33,6 +33,7 @@ function retornaMaiorNumero(array) {
 // Escreva uma função que recebe um array como parâmetro e retorna a quantidade de elementos que há nele.
 function retornaQuantidadeElementos (array) {
    // implemente sua lógica aqui
+   return array.length;
 }
 
 //Exercício 6
@@ -45,8 +46,13 @@ function retornaExpressoesBooleanas() {
 //Exercício 7
 // Escreva uma função que, recebendo um número N como parâmetro, retorne os N primeiros números pares 
 // (por exemplo, se N for 3, você deve imprimir 0, 2 e 4; se N for 5, deve retornar 0, 2, 4, 6 e 8). 
-function retornaNNumerosPares(n) {
+   function retornaNNumerosPares(n) {
    // implemente sua lógica aqui
+   if(n%2 == 0) {
+      console.log("É par o número " + n);
+   } else {
+      console.log("É ímpar e digite outro número");
+   }
 }
 
 // Exercício 8
