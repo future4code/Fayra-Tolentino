@@ -16,13 +16,18 @@ function retornaNumerosParesElevadosADois (array) {
  //Exercício 3
 
 function retornaNumerosPares (array) {
-    // implemente sua lógica aqui
+   // let arrayvazio=[];
+   // for (let i =0; i<array.length; i++){
+   //    if( array%2 ==0){
+   //       arrayvazio.push()
+   //    }return arrayvazio
+   //    } 
 }
 
  //Exercício 4
 
 function retornaMaiorNumero(array) {
-    // implemente sua lógica aqui
+   return Math.max(array)
 }
 
  //Exercício 5
