@@ -1,11 +1,13 @@
 //Exercício 1
 // Escreva uma função que recebe um array como parâmetro e retorne este array invertido.
 
-function inverteArray(array) {
-  // implemente sua lógica aqui
-   
-
-}
+const numbers = [0, 8, 23, 16, 10, 15, 41, 12, 13];
+function inverteArray(numbers) {
+  //  sua lógica aqui
+   numbers.reverse()
+   console.log(numbers)   
+};
+// } 
 
 //Exercício 2
 // Escreva uma função que recebe um array de números e retorna um array com os números pares elevados a 2.
