@@ -1,20 +1,21 @@
 //Exercício 1
 // Escreva uma função que recebe um array como parâmetro e retorne este array invertido.
 
-const numbers = [0, 8, 23, 16, 10, 15, 41, 12, 13];
-function inverteArray(numbers) {
+const array = [0, 8, 23, 16, 10, 15, 41, 12, 13];
+function inverteArray(array) {
   //  sua lógica aqui
-   numbers.reverse()
-   return numbers  
+   array.reverse()
+   return array
 };
-// } 
 
 //Exercício 2
 // Escreva uma função que recebe um array de números e retorna um array com os números pares elevados a 2.
 
 function retornaNumerosParesElevadosADois (array) {
    // implemente sua lógica aqui
-   
+   if (array%2 == 0){
+      Math.pow(array, 2)
+   }return array
    }
 
 //Exercício 3
@@ -38,7 +39,6 @@ function retornaQuantidadeElementos (array) {
 
 //Exercício 6
 
-
 function retornaExpressoesBooleanas() {
    // implemente sua lógica aqui
 }
@@ -47,13 +47,8 @@ function retornaExpressoesBooleanas() {
 // Escreva uma função que, recebendo um número N como parâmetro, retorne os N primeiros números pares 
 // (por exemplo, se N for 3, você deve imprimir 0, 2 e 4; se N for 5, deve retornar 0, 2, 4, 6 e 8). 
    function retornaNNumerosPares(n) {
-   // implemente sua lógica aqui
-   if(n%2 == 0) {
-      console.log("É par o número " + n);
-   } else {
-      console.log("É ímpar e digite outro número");
+     // implemente sua lógica aqui 
    }
-}
 
 // Exercício 8
 // Vocês lembram de trigonometria? (Oh, não, trigonometria). Relaxem. O exercício é simples, mas mexe com isso. 
@@ -65,6 +60,13 @@ function retornaExpressoesBooleanas() {
 
 function checaTriangulo(a, b, c) {
   // implemente sua lógica aqui
+   if( a=== b && a===c && b===c){
+      return 'Equilátero'
+   }else if ( a=== b || a===c || c===b){
+      return 'Isósceles'
+   }else{
+   return 'Escaleno'
+   }
 }
 
 // Exercício 9
