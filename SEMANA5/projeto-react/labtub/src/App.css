@@ -18,6 +18,7 @@ header {
   justify-content: space-between;
   padding: 0 50px;
   height: 10%;
+  color:white;
 }
 
 main {
@@ -27,8 +28,7 @@ main {
 
 .menu-vertical {
   flex-basis: 200px;
-  border-right-style: solid;
-  border-right-width: thin;
+  border-right-style: none;
 }
 
 .botoes-meunu-vertical {
@@ -103,6 +103,7 @@ footer {
   padding: 0;
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .box-pagina-principal > img {
