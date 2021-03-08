@@ -55,6 +55,8 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 24.8% 0.2%);
   grid-template-rows: repeat(4, 270px 20px);
+  width: 8vw;
+  height: 4vh;
 }
 
 .media1 {
@@ -109,9 +111,10 @@ main {
 
 
 footer {
-  height: 10%;
+  height: 8%;
   background-color: grey;
   margin: 0;
+  margin-top: 2%;
   padding: 0;
   display: flex;
   align-items: center;
