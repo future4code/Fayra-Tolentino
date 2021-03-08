@@ -42,6 +42,8 @@ main {
 .menu-vertical {
   flex-basis: 200px;
   border-right-style: none;
+  color: gray;
+  padding-top: 3vh;
 }
 
 .botoes-meunu-vertical {
