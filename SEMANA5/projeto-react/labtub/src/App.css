@@ -26,6 +26,19 @@ main {
   display: flex;
 }
 
+#campoDeBusca{
+  border: none;
+  border-radius: 5px;
+  padding: 0px;
+  margin: 0px;
+  height: 4vh;
+  width: 50%;
+  outline: none;
+  align-items: center;
+  font-size: medium;
+  padding-left: 24px;
+}
+
 .menu-vertical {
   flex-basis: 200px;
   border-right-style: none;
@@ -89,8 +102,7 @@ main {
   display: grid;
   grid-template-rows: 3fr 1fr;
   grid-template-columns: 1fr;
-  border-style: solid;
-  border-width: thin; 
+  border-style: none;
   align-items: start;
   justify-items: stretch;
 }

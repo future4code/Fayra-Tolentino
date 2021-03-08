@@ -14,7 +14,7 @@ function App() {
       <div className="tela-inteira">
         <header>
             <h1>Lab Tube</h1>
-            <input type="text" placeholder="Busca" id="campoDeBusca" />
+            <input type="text" placeholder="Pesquisar" id="campoDeBusca" />
         </header>
 
         <main>
