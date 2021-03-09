@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
-import CardPequeno from './components/CardPequeno/CardPequeno'
+import CardPequeno from './components/CardPequeno/CardPequeno';
+// import email.png from 'src\image\email.png'
 
 function App() {
   return (
@@ -23,11 +24,11 @@ function App() {
 
       <div className="page-section-container">
       <CardPequeno
-          imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" 
+          imagem="src\email.png" 
           texto="Twitter" 
         />  
       <CardPequeno
-          imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" 
+          imagem="src\location.png" 
           texto="Twitter" 
         />    
       </div>
