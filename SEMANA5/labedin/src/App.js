@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import CardPequeno from './components/CardPequeno/CardPequeno'
 
 function App() {
   return (
@@ -21,7 +22,21 @@ function App() {
       </div>
 
       <div className="page-section-container">
+      <CardPequeno
+          imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" 
+          texto="Twitter" 
+        />  
+      <CardPequeno
+          imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" 
+          texto="Twitter" 
+        />    
+      </div>
+
+      <div className="page-section-container">
+
         <h2>Experiências profissionais</h2>
+
+        
         <CardGrande 
           imagem="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAwFBMVEX////5EjztFEfiDj75EDr8f5btEUX5DznwQGn84+
           niCzz5Ez3/+vv//Pz3Ej75GEH5Ikn5HUXwE0T6QWP/8/X+6u7oDz37UXD6LlP6OFv9r736KU/+2eD6S2v8lKf9wcz8eJD+1Nz8jaH7bIb8m638kaT9w874yNP1rr7
@@ -39,6 +54,8 @@ function App() {
           descricao="Estagiária responsável pela atualização do banco de dados técnicos de São Paulo." 
         />
       </div>
+
+      
 
       <div className="page-section-container">
         <h2>Minhas redes sociais</h2>
