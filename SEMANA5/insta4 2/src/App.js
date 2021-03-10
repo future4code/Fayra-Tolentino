@@ -5,6 +5,8 @@ import ShakiraPerfil from './img/shak_logo.jpg';
 import ShakiraPost from './img/Shakira.jpeg';
 import IvetePerfil from './img/vevete_logo.png';
 import IvetePost from './img/vevete.jpg';
+import JloPerfil from './img/jlo_logo.jpg';
+import JloPost from './img/jlo.jpg';
 
 class App extends React.Component {
   render() {
@@ -22,8 +24,8 @@ class App extends React.Component {
         />
         <Post
           nomeUsuario={'JLO'}
-          fotoUsuario={'https://picsum.photos/50/50'}
-          fotoPost={'https://picsum.photos/200/150'}
+          fotoUsuario={JloPerfil}
+          fotoPost={JloPost}
         />
       </div>
     );
