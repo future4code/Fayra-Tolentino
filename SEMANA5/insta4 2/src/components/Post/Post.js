@@ -17,7 +17,14 @@ class Post extends React.Component {
   }
 
   onClickCurtida = () => {
+    let iconeCurtida
     console.log('Curtiu!')
+    if(this.state.curtido) {
+      iconeCurtida = iconeCoracaoPreto
+    } else {
+      iconeCurtida = iconeCoracaoBranco
+    }
+
   }
 
   onClickComentario = () => {
