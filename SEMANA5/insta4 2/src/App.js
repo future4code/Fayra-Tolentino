@@ -9,7 +9,6 @@ import JloPerfil from './img/jlo_logo.jpg';
 import JloPost from './img/jlo.jpg';
 
 
-
 class App extends React.Component {
   render() {
     return (
