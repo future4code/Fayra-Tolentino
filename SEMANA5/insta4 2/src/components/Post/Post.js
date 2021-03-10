@@ -10,10 +10,10 @@ import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
 
 class Post extends React.Component {
   state = {
-    curtido: true,
-    numeroCurtidas: 1,
-    comentando: true,
-    numeroComentarios: 1
+    curtido: false,
+    numeroCurtidas: 0,
+    comentando: false,
+    numeroComentarios: 0
   }
 
   onClickCurtida = () => {

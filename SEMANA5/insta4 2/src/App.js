@@ -7,19 +7,19 @@ class App extends React.Component {
     return (
       <div className={'app-container'}>
         <Post
-          nomeUsuario={'paulinha'}
-          fotoUsuario={'https://picsum.photos/50/50'}
+          nomeUsuario={'Fay'}
+          fotoUsuario={'https://picsum.photos/50/42'}
           fotoPost={'https://picsum.photos/200/150'}
         />
         <Post
-          nomeUsuario={'Fayra'}
-          fotoUsuario={'https://picsum.photos/50/50'}
-          fotoPost={'https://picsum.photos/200/150'}
+          nomeUsuario={'Ivete'}
+          fotoUsuario={'https://picsum.photos/50/52'}
+          fotoPost={'https://picsum.photos/200/200'}
         />
         <Post
-          nomeUsuario={'Bananinha'}
+          nomeUsuario={'Jlo'}
           fotoUsuario={'https://picsum.photos/50/50'}
-          fotoPost={'https://picsum.photos/200/150'}
+          fotoPost={'https://picsum.photos/200/250'}
         />
       </div>
     );
