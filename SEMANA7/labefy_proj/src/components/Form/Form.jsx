@@ -1,6 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const FormBase = styled.div `
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding-top:20vh;
+`
+
 const PlaylistCreate = styled.button `
     color:white;
     font-weight:bolder;
@@ -21,19 +29,27 @@ const MusicName = styled.input `
     border:0 none;
     border-bottom: 1px solid black;
 `
+const InputContainer = styled.div `
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top: 20vh;
+`
 
 export default class Form extends React.Component{
     render(){
         return(
-            <div className= "FormBase">
+            <FormBase>
                 <h1>Labefy</h1>
-                <MusicName
-                    // onChange={this.handleName}
-                    // value={this.state.name}
-                    placeholder="Nome da Playlist"
-                />
+                <InputContainer>
+                    <MusicName
+                        // onChange={this.handleName}
+                        // value={this.state.name}
+                        placeholder="Nome da Playlist"
+                    />
                 <PlaylistCreate>Criar Playlist</PlaylistCreate>
-            </div>
+                </InputContainer>
+            </FormBase>
         )
     }
 }
