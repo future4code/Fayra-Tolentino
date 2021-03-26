@@ -15,13 +15,19 @@ const PlaylistCreate = styled.button `
     line-height:12px;
     
 `
+const MusicName = styled.input `
+    width: 300px;
+    height:42px;
+    border:0 none;
+    border-bottom: 1px solid black;
+`
 
 export default class Form extends React.Component{
     render(){
         return(
             <div className= "FormBase">
                 <h1>Labefy</h1>
-                <input
+                <MusicName
                     // onChange={this.handleName}
                     // value={this.state.name}
                     placeholder="Nome da Playlist"
