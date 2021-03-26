@@ -1,4 +1,6 @@
 import React from 'react'
+import Form from './components/Form/Form'
+
 
 
 export default class App extends React.Component{
@@ -6,6 +8,7 @@ export default class App extends React.Component{
     return(
       <div>
         <div className= "header"></div>
+        <Form/>
         <div className= "footer"></div>
       </div>
     )
