@@ -61,22 +61,21 @@ export default class Form extends React.Component{
 
     createPlaylist = () =>{
         const body ={
-            name: this.state.name 
+            name: this.state.playlistName
         }
 
         axios
         .post(baseUrl,body,axiosConfig)
         .then((response) =>{
             alert("Playlist Criada com Sucesso")
-            this.setState({name:""})
+            this.setState({playlistName:""})
             console.log(response)
         })
         .catch((error) =>{
-            alert("Deu ruim")
             console.log(error)
+            this.setState({playlistName:''})
         })
     }
-
     render(){
         return(
             <FormBase>
