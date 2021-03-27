@@ -23,7 +23,6 @@ const Title = styled.h1 `
 const PlaylistCreate = styled.button `
     color:white;
     font-weight:bolder;
-    text-transform:uppercase;
     width: 150px;
     height:50px;
     border-radius:120px;
@@ -33,7 +32,10 @@ const PlaylistCreate = styled.button `
     cursor:pointer;
     line-height:12px;
     border:none;
-    
+    outline:none;
+    &:hover{
+        background: linear-gradient(60deg, #fa8231,#f37055);
+    }
 `
 const MusicName = styled.input `
     width: 300px;

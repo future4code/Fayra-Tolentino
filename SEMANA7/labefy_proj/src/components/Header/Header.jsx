@@ -10,7 +10,6 @@ const HeaderStyle = styled.div `
 const AcessPlaylist = styled.button `
     color:white;
     font-weight:bolder;
-    text-transform:uppercase;
     align-items:flex-start;
     margin-top:2.4vh;
     margin-left:80vw;
@@ -23,6 +22,10 @@ const AcessPlaylist = styled.button `
     cursor:pointer;
     line-height:12px;
     border-color:white;
+    outline:none;
+    &:hover{
+        background: linear-gradient(60deg, #fa8231,#f37055);
+    }
     `
 
 export default class Form extends React.Component{
