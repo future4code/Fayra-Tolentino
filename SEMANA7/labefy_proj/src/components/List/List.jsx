@@ -19,6 +19,21 @@ const TitleList = styled.h2 `
     font-size:60px;
     color:#EE5A24;
 `
+const ListContainer = styled.div `
+    display:flex;
+    align-items:center;
+    flex-direction:row;
+    
+    /* padding-top: 8vh; */
+`
+const Paragraph = styled.p `
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:500;
+    font-size:20px;
+    color:#EE5A24;
+    margin-right:40px;
+`
 
 // ---------------------------------------- Axios & Stucture-------------------------------------------------
 
@@ -67,15 +82,19 @@ export default class List extends React.Component{
 
     render(){
         const mapPlayList =this.state.playlists.map((playlist) => (
-                <div key={playlist.id}>
-                    <p>{playlist.name}</p>
-                    <button onClick ={()=> this.deletePlaylist(playlist.id)}>Excluir Playlist</button>
-                </div>
+                <ListContainer>
+                    {/* <div key={playlist.id}> */}
+                        <Paragraph>{playlist.name}</Paragraph>
+                        <button onClick ={()=> this.deletePlaylist(playlist.id)}>Excluir Playlist</button>
+                    {/* </div> */}
+                </ListContainer>    
         ))   
         return(
             <ListBase>
                 <TitleList> Suas Playlists </TitleList> 
-                    <p>{mapPlayList} </p> 
+                    <ListContainer>
+                        <Paragraph>{mapPlayList} </Paragraph> 
+                    </ListContainer>
             </ListBase>
         )
     }
