@@ -1,6 +1,24 @@
 import React from "react";
 import axios from "axios"
 import { axiosConfig, baseUrl } from "../../paramenters";
+import styled from 'styled-components'
+
+// ---------------------------------------- Styled-Component-------------------------------------------------
+
+const ListBase = styled.div `
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding-top:12vh;
+`
+const TitleList = styled.h2 `
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:bolder;
+    font-size:60px;
+    color:#EE5A24;
+`
 
 // ---------------------------------------- Axios & Stucture-------------------------------------------------
 
@@ -55,10 +73,10 @@ export default class List extends React.Component{
                 </div>
         ))   
         return(
-            <div>
-                <h2> Suas Playlists </h2>
+            <ListBase>
+                <TitleList> Suas Playlists </TitleList> 
                     <p>{mapPlayList} </p> 
-            </div>
+            </ListBase>
         )
     }
 }
