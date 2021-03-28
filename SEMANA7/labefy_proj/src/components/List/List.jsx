@@ -23,8 +23,6 @@ const ListContainer = styled.div `
     display:flex;
     align-items:center;
     flex-direction:row;
-    
-    /* padding-top: 8vh; */
 `
 const Paragraph = styled.p `
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 
@@ -32,7 +30,25 @@ const Paragraph = styled.p `
     font-weight:500;
     font-size:20px;
     color:#EE5A24;
-    margin-right:40px;
+    
+`
+const PlaylistDel = styled.button `
+    color:white;
+    font-weight:bolder;
+    width: 140px;
+    height:40px;
+    border-radius:120px;
+    left:calc(50% - 75px);
+    top:calc(50% - 25px);
+    background: linear-gradient(60deg, #EE5A24, #f37055);
+    cursor:pointer;
+    line-height:12px;
+    border:none;
+    outline:none;
+    margin-left:190px;
+    &:hover{
+        background: linear-gradient(60deg, #fa8231,#f37055);
+    }
 `
 
 // ---------------------------------------- Axios & Stucture-------------------------------------------------
@@ -85,7 +101,7 @@ export default class List extends React.Component{
                 <ListContainer>
                     {/* <div key={playlist.id}> */}
                         <Paragraph>{playlist.name}</Paragraph>
-                        <button onClick ={()=> this.deletePlaylist(playlist.id)}>Excluir Playlist</button>
+                        <PlaylistDel onClick ={()=> this.deletePlaylist(playlist.id)}>Excluir Playlist</PlaylistDel>
                     {/* </div> */}
                 </ListContainer>    
         ))   
