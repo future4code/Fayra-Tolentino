@@ -54,31 +54,28 @@ const InputContainer = styled.div `
 
 export default class Form extends React.Component{
     state = {
-        playlistName: ""
+        inputValue: ""
     }
 
     handlePlaylist = (event) =>{
-        this.setState({playlistName:event.target.value})
+        this.setState({inputValue:event.target.value})
     }
 
     createPlaylist = () =>{
         const body ={
-            name: this.state.playlistName
+            name: this.state.inputValue
         }
 
         axios
         .post(baseUrl,body,axiosConfig)
         .then((response) =>{
             alert("Playlist Criada com Sucesso")
-            this.setState({playlistName:""})
+            this.setState({inputValue:""})
             console.log(response)
         })
         .catch((error) =>{
-            // if(playlistName ==""){
-            //     alert ("Digite um nome válido!")
-            // }
             console.log(error)
-            this.setState({playlistName:''})
+            // this.setState({inputValue:''})
         })
     }
     render(){
@@ -88,7 +85,7 @@ export default class Form extends React.Component{
                 <InputContainer>
                     <MusicName
                         onChange={this.handlePlaylist}
-                        value={this.state.name}
+                        value={this.state.inputValue}
                         placeholder=" Digite o nome da Playlist"
                     />
                 <PlaylistCreate onClick ={this.createPlaylist}>Criar Playlist</PlaylistCreate>

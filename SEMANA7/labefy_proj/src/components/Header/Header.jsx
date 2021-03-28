@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// ---------------------------------------- Styled-Component-------------------------------------------------
+
 const HeaderStyle = styled.div `
     width: 100vw;
     height:12vh;
@@ -28,12 +30,14 @@ const AcessPlaylist = styled.button `
     }
     `
 
-export default class Form extends React.Component{
+// ---------------------------------------- Stucture-------------------------------------------------
+
+export default class Header extends React.Component{
     render(){
         return(
             <div>
                 <HeaderStyle>
-                <AcessPlaylist onClick={this.props.changePage}>Acessar Playlist</AcessPlaylist>
+                    <AcessPlaylist onClick={this.props.changePage}>Acessar Playlist</AcessPlaylist>
                 </HeaderStyle>
             </div>
         )

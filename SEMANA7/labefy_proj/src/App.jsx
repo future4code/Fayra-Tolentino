@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './components/Header/Header'
 import Form from './components/Form/Form'
 import Footer from './components/Footer/Footer'
-import List from './components/List'
+import List from './components/List/List'
 
 export default class App extends React.Component{
   state={
@@ -30,8 +30,10 @@ export default class App extends React.Component{
   render(){
     return(
       <div className ="App">
-        <Header/>
-        <Form/>
+        <Header
+          changePage = {()=>this.changePage()}
+        />
+        {this.renderPage()}
         <Footer/>
       </div>
     )

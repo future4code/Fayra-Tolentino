@@ -2,10 +2,11 @@ import React from "react";
 import axios from "axios"
 import { axiosConfig, baseUrl } from "../../paramenters";
 
+// ---------------------------------------- Axios & Stucture-------------------------------------------------
 
 export default class List extends React.Component{
-    state ={
-        name:[]
+    state = {
+        playlists:[]
     }
 
     componentDidMount(){
@@ -13,18 +14,27 @@ export default class List extends React.Component{
     }
 
     getAllPlaylist = async () => {
-        try{
-            const response = await axios.get(baseUrl,axiosConfig)
-            this.setState({name:response.data})
-        }catch (error){
-            console.log(error)
-        }
+        axios
+            .get(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists`, 
+            {
+                headers: {
+                    Authorization: "fayra-miranda-cruz"
+                }
+            }
+            )
+            .then((res)=>{
+                this.setState({playlists:res.data.result.list})
+                console.log(res.data.result.list)
+            })
+            .catch((error)=>{
+                console.log(error.res.data)
+            })
     }
 
     deletePlaylist = (id) =>{
         if(window.confirm("Deseja deletar sua playlist?")){
             axios
-            .delete(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:${id}`, 
+            .delete(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}`, 
             axiosConfig
             )
             .then((response)=>{
@@ -38,18 +48,16 @@ export default class List extends React.Component{
     }
 
     render(){
-        const mapPlayList =this.state.musicsList.map((playlist) =>{
-            return(
+        const mapPlayList =this.state.playlists.map((playlist) => (
                 <div key={playlist.id}>
                     <p>{playlist.name}</p>
                     <button onClick ={()=> this.deletePlaylist(playlist.id)}>Excluir Playlist</button>
                 </div>
-            )
-        })   
+        ))   
         return(
             <div>
                 <h2> Suas Playlists </h2>
-                {mapPlayList}
+                    <p>{mapPlayList} </p> 
             </div>
         )
     }
