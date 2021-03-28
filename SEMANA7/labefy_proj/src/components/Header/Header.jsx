@@ -33,7 +33,7 @@ export default class Form extends React.Component{
         return(
             <div>
                 <HeaderStyle>
-                <AcessPlaylist>Acessar Playlist</AcessPlaylist>
+                <AcessPlaylist onClick={this.props.changePage}>Acessar Playlist</AcessPlaylist>
                 </HeaderStyle>
             </div>
         )

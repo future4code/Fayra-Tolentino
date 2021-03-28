@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios"
 import { axiosConfig, baseUrl } from "../../paramenters";
 
+
 export default class List extends React.Component{
     state ={
         name:[]
@@ -30,7 +31,7 @@ export default class List extends React.Component{
                 this.getAllPlaylist()
                 console.log(response)
             })
-            .catch((erro) =>{
+            .catch((error) =>{
                 console.log(error)
             })
         }
