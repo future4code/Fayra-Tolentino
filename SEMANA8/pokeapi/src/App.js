@@ -27,4 +27,10 @@ const App =()=>{
     }
     getPokemonName()
   },[setPokemonName])
+
+  return(
+    <div>
+      
+    </div>
+  )
 }
