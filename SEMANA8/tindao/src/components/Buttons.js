@@ -21,7 +21,7 @@ const ButtonContainer = styled.div `
     width:20vw;
     align-items: flex-end;
     justify-content:space-around;
-    margin-top:60vh;
+    margin-top:56vh;
 `
 
 export default function IconButtons() {
