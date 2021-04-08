@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Heart from './components/Heart'
+import Buttons from './components/Buttons'
 
 const DivContainer = styled.div `
   display:flex;
@@ -19,11 +19,12 @@ const MainContainer = styled.div `
   flex-direction: row;
   align-items: center;
 `
+
 function App() {
   return (
     <DivContainer>
       <MainContainer>
-        <Heart/>
+        <Buttons/>
       </MainContainer>
     </DivContainer>
   );
