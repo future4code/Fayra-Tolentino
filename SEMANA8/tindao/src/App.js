@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Heart from './components/Heart'
 
 const DivContainer = styled.div `
   display:flex;
@@ -22,6 +23,7 @@ function App() {
   return (
     <DivContainer>
       <MainContainer>
+        <Heart/>
       </MainContainer>
     </DivContainer>
   );
