@@ -24,6 +24,8 @@ const MainContainer = styled.div `
   flex-direction:column;
 `
 
+
+
 function App() {
   return (
     <DivContainer>
