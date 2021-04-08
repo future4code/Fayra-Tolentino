@@ -26,10 +26,10 @@ const Title = styled.p `
     text-align:center;
     font-weight:700;
     font-size:25px;
-    color:#9C27B0;
+    color:#ce93d8;
 `
 const Span = styled.span `
-    color:#EC407A;
+    color:#e91e63;
 `
 
 export default function IconButtons() {
