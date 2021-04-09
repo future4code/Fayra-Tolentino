@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Buttons from './components/Buttons'
 import Header from './components/Header'
+import Profile from './components/Profile'
 
 
 const DivContainer = styled.div `
@@ -31,6 +32,7 @@ function App() {
     <DivContainer>
       <MainContainer>
         <Header/>
+        <Profile/>
         <Buttons/>
       </MainContainer>
     </DivContainer>
