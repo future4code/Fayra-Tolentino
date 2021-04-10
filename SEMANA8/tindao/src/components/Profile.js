@@ -4,7 +4,17 @@ import axios from 'axios'
 import {baseUrl} from './Paramenters'
 
 
-
+const ProfileBase = styled.div `
+    width:280px;
+    height:300px;
+    margin-top:-20px;
+    position:relative;
+    > img{
+        width:100%;
+        height:100%;
+        border-radius:5px;
+    }
+`
 export default function Profile (){
     const [profile, setProfile] = useState({})
     useEffect(() => {
@@ -22,11 +32,11 @@ export default function Profile (){
 
     const showProfile = ()=>{
         return(
-            <div>
+            <ProfileBase>
                 <img src={profile.photo}/>
                 <p>{profile.name}, {profile.age}</p>
                 <p>{profile.bio}</p>
-            </div>
+            </ProfileBase>
         )
     }
     return (

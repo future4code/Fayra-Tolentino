@@ -21,7 +21,7 @@ const HeaderContainer = styled.div `
     top:50px;
     align-items: flex-end;
     justify-content:space-around;
-    margin-left:100px;
+    margin-left:64px;
 `
 const Title = styled.p `
     text-align:center;
