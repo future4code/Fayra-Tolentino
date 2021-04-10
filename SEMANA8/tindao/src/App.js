@@ -9,8 +9,10 @@ const DivContainer = styled.div `
   display:flex;
   justify-content:center;
   align-items:center;
-  padding-top:8vh;
+  /* padding-top:8vh; */
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  height:100vh;
 `
 
 const MainContainer = styled.div `
@@ -23,6 +25,7 @@ const MainContainer = styled.div `
   flex-direction: row;
   align-items: center;
   flex-direction:column;
+  background-color:white;
 `
 
 
