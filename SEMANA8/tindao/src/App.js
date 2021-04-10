@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Buttons from './components/Buttons'
-// import Header from './components/Header'
+import Header from './components/Header'
 // import Profile from './components/Profile'
 
 
@@ -31,7 +31,7 @@ function App() {
   return (
     <DivContainer>
       <MainContainer>
-        {/* <Header/> */}
+        <Header/>
           {/* <Profile/> */}
         <Buttons/>
       </MainContainer>

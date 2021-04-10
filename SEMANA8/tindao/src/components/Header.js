@@ -16,8 +16,9 @@ const useStyles = makeStyles((theme) => ({
 
 const HeaderContainer = styled.div `
     display: flex;
-    /* border:groove; */
     width:20vw;
+    position:absolute;
+    top:50px;
     align-items: flex-end;
     justify-content:space-around;
     margin-left:100px;
