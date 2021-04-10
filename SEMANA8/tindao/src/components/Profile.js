@@ -7,7 +7,7 @@ import {baseUrl} from './Paramenters'
 const ProfileBase = styled.div `
     width:280px;
     height:300px;
-    margin-top:-20px;
+    margin-top:-89px;
     position:relative;
     > img{
         width:100%;
@@ -15,6 +15,24 @@ const ProfileBase = styled.div `
         border-radius:5px;
     }
 `
+
+const ProfileTitle = styled.p `
+    font-size:large;
+    font-weight:bolder;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+    color:#e91e63;
+`
+const ProfileDescription = styled.p `
+    font-size:14px;
+    line-height:16.1px;
+    letter-spacing:normal;
+    font-weight:500;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+    color:#e91e63;
+`
+
 export default function Profile (){
     const [profile, setProfile] = useState({})
     useEffect(() => {
@@ -34,8 +52,8 @@ export default function Profile (){
         return(
             <ProfileBase>
                 <img src={profile.photo}/>
-                <p>{profile.name}, {profile.age}</p>
-                <p>{profile.bio}</p>
+                <ProfileTitle>{profile.name}, {profile.age}</ProfileTitle>
+                <ProfileDescription>{profile.bio}</ProfileDescription>
             </ProfileBase>
         )
     }

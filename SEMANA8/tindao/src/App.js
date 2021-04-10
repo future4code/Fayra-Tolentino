@@ -17,7 +17,7 @@ const DivContainer = styled.div `
 
 const MainContainer = styled.div `
   width:28vw;
-  height:80vh;
+  height:84vh;
   display:flex;
   border-style: groove;
   border-radius:12px;
