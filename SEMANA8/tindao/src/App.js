@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Buttons from './components/Buttons'
-import Header from './components/Header'
-import Profile from './components/Profile'
+// import Header from './components/Header'
+// import Profile from './components/Profile'
 
 
 const DivContainer = styled.div `
@@ -31,8 +31,8 @@ function App() {
   return (
     <DivContainer>
       <MainContainer>
-        <Header/>
-        <Profile/>
+        {/* <Header/> */}
+          {/* <Profile/> */}
         <Buttons/>
       </MainContainer>
     </DivContainer>

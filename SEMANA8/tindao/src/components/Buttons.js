@@ -17,11 +17,11 @@ const useStyles = makeStyles((theme) => ({
 
 const ButtonContainer = styled.div `
     display: flex;
-    border:groove;
+    /* border:groove; */
     width:20vw;
-    align-items: flex-end;
+    position:absolute;
     justify-content:space-around;
-    margin-top:56vh;
+    top:520px;
 `
 
 export default function IconButtons() {

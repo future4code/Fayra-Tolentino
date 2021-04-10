@@ -1,6 +1,9 @@
 import {useState, useEffect} from 'react'
+import styled from 'styled-components'
 import axios from 'axios'
 import {baseUrl} from './Paramenters'
+
+
 
 export default function Profile (){
     const [profile, setProfile] = useState({})
@@ -21,8 +24,8 @@ export default function Profile (){
         return(
             <div>
                 <img src={profile.photo}/>
-                <p>{profile.name},{profile.age}</p>
-            <p>{profile.bio}</p>
+                <p>{profile.name}, {profile.age}</p>
+                <p>{profile.bio}</p>
             </div>
         )
     }
