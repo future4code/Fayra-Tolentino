@@ -34,8 +34,9 @@ function App() {
     <DivContainer>
       <MainContainer>
         <Header/>
-          <Profile/>
+        <Profile/>
         <Buttons/>
+        
       </MainContainer>
     </DivContainer>
   );

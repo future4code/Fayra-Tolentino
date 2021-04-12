@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import IconButton from '@material-ui/core/IconButton';
 import FavoriteBorderRoundedIcon from '@material-ui/icons/FavoriteBorderRounded';
 import ClearRoundedIcon from '@material-ui/icons/ClearRounded';
+import axios from 'axios';
+import { baseUrl } from './Paramenters';
+// import Profile from './Profile'
 
 
 
@@ -22,6 +25,18 @@ const ButtonContainer = styled.div `
     justify-content:space-around;
     top:546px;
 `
+
+// const ChoseProfile = async(id,chosePerson) =>{
+//     const body ={
+//         "id":id,
+//         "choice":chosePerson
+//     }
+//     try{
+//         axios.post(baseUrl,body)
+
+//         // Pegar o Profile return e no botão de x passa post como negativo e no s2 passa post como positivo 
+//     }
+// }
 
 export default function IconButtons() {
     const classes = useStyles();
