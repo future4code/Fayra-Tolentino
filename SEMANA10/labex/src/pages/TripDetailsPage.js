@@ -5,7 +5,7 @@ import React from 'react'
 function TripDetails() {
     return (
         <div className="TripDetails">
-
+            <p>Trip detail page</p>
         </div>
     );
 }

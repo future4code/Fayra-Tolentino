@@ -4,7 +4,7 @@ import React from 'react'
 function CreateTrip() {
     return (
         <div className="CreateTrip">
-
+            <p>Create trip page</p>
         </div>
     );
 }
