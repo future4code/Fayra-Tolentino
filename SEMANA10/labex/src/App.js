@@ -1,24 +1,42 @@
 import React from 'react'
-// import AdminHome from './pages/AdminHomePage'
-// import Application from './pages/ApplicationFormPage'
-// import CreateTrip from './pages/CreateTripPage'
-// import Home from './pages/HomePage'
-// import List from './pages/ListTripsPage'
-// import Login from './pages/LoginPage'
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from './pages/HomePage'
+import List from './pages/ListTripsPage'
+import Application from './pages/ApplicationFormPage'
+import Login from './pages/LoginPage'
+import AdminHome from './pages/AdminHomePage'
+import CreateTrip from './pages/CreateTripPage'
 import TripDetails from './pages/TripDetailsPage'
+
 
 
 function App() {
   return (
-    <div className="App">
-      {/* <AdminHome/> */}
-      {/* <Application/> */}
-      {/* <CreateTrip/> */}
-      {/* <Home/> */}
-      {/* <List/> */}
-      {/* <Login/> */}
-      <TripDetails/>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route exact path="/trips/list">
+          <List/>
+        </Route>
+        <Route exact path="/trips/application">
+          <Application/>
+        </Route>
+        <Route exact path="/login">
+          <Login/>
+        </Route>
+        <Route exact path="/admin/trips/list">
+          <AdminHome/>
+        </Route>
+        <Route exact path="/admin/trips/create">
+          <CreateTrip/>
+        </Route>
+        <Route exact path="/admin/trips/id">
+          <TripDetails/>
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
