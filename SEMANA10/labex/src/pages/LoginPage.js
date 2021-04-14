@@ -1,9 +1,9 @@
 // Para fazermos login como administrador
 
-import React, {UseState}  from 'react'
+import React, {useState}  from 'react'
 import axios from 'axios'
 import {useHistory} from  'react-router-dom'
-import {goToTripDetails} from './../components/routes/'
+import {goToTripDetails} from './../components/routes/cordinator'
 
 
 export const LoginPage = () => {
@@ -28,7 +28,7 @@ export const LoginPage = () => {
         .then((res)=>{
             console.log(res.data)
             window.localStorage.setItem('token',res.data.token)
-            const history = useHistory({goToTripDetails})
+            history = useHistory({goToTripDetails})
         })
         .catch((err)=>{
             console.log (err)

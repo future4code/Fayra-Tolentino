@@ -7,13 +7,13 @@ import axios from 'axios'
 
 export const TripDetails = () => {
     useProtectedPage ()
-    const [trip, setTrip = useState({})
+    const [trip, setTrip] = useState({})
     const history = useHistory()
 
     useEffect (() =>{
         getTripDetail()
     },[])
-    
+
     return (
         <div className="TripDetails">
             <p>Trip detail page</p>

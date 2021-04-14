@@ -35,6 +35,9 @@ function Router() {
             <Route exact path="/admin/trips/id">
                 <TripDetails/>
             </Route>
+            <Route>
+                <div>Página não encontrada</div>
+            </Route>
         </Switch>
     </BrowserRouter>
     );
