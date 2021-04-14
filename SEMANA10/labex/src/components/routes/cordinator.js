@@ -27,5 +27,5 @@ export const goToTripDetails = (history) =>{
 }
 
 export const goToLastPage = (history) => {
-    history.goBack();
+    history.goBack()
 }

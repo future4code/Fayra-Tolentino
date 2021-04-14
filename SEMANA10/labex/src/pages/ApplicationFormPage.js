@@ -11,7 +11,7 @@ function Application() {
             <button onClick={history.goBack}>Voltar</button>
             <button onClick={() => goToApplication(history)}> Inscreva-se</button>
         </div>
-    );
+    )
 }
 
 export default Application;
