@@ -3,8 +3,10 @@
 import React from 'react'
 import {goBack,goToApplication} from '../components/routes/cordinator'
 import { useHistory } from "react-router-dom";
+import {useProtectedPage} from '../hooks/useProtectedPage'
 
 function List() {
+    useProtectedPage ()
     const history = useHistory()
     return (
         <div className="List">
