@@ -41,9 +41,11 @@ export const LoginPage = () => {
     return (
         <div>
             <h1>Login</h1>
-            <input value={email} onChange={handleEmail} placeholder="E-mail" />
-            <input value={password} onChange={handlePassword} placeholder="Senha" />
+            <form>
+            <input value={email} onChange={handleEmail} placeholder="E-mail" type ='email' pattern={"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"} required />
+            <input value={password} onChange={handlePassword} placeholder="Senha"  type ='string' required />
             <button onClick={login}>Fazer login</button>
+            </form>
         </div>
     )
 }
