@@ -10,9 +10,9 @@ export const TripDetails = () => {
     const [trip, setTrip] = useState({})
     const history = useHistory()
 
-    useEffect (() =>{
-        getTripDetail()
-    },[])
+    // useEffect (() =>{
+    //     getTripDetail()
+    // },[])
 
     return (
         <div className="TripDetails">
