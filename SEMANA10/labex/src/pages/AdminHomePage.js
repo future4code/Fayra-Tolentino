@@ -2,14 +2,19 @@
 import React,{useState} from 'react'
 import {useHistory} from 'react-router-dom'
 import {useProtectedPage} from '../hooks/useProtectedPage'
+import {goToCreateTrip,goToTripDetails,goToLogin} from './../components/routes/cordinator'
 
 
 function AdminHome() {
     useProtectedPage ()
-    const history = useHistory()
+    const history = useHistory();
     return (
-        <div className="AdminHome">
-            <p>Add page</p>
+        <div className="Home">
+            <p>AdminHome</p>
+            <button onClick={history.goBack}>Voltar</button>
+            <button onClick={() => goToTripDetails(history)}>Ver Viagens</button>
+            <button onClick={() => goToCreateTrip(history)}> Criar Viagem</button>
+            <button> Logout </button>
         </div>
     );
 }

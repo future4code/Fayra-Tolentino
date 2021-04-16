@@ -42,9 +42,10 @@ export const LoginPage = () => {
     return (
         <div>
             <h1>Login</h1>
+            {/* não pode esqueccer do onSubmit do form e na função por event.preventDefault(), para funcionar */}
             <form onSubmit ={login}>
             <input value={email} onChange={handleEmail} placeholder="E-mail" type ='email' pattern={"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"} required />
-            <input value={password} onChange={handlePassword} placeholder="Senha"  type ='string' required />
+            <input value={password} onChange={handlePassword} placeholder="Senha"  type ='password' required />
             <button>Fazer login</button>
             </form>
         </div>

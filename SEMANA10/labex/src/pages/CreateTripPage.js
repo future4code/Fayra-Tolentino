@@ -60,10 +60,10 @@ function CreateTrip() {
                     <option value="Plutao">Plutão</option>
                 </select>
                 <input value={date} onChange={handleDate} type ='date' required/>
-                <input value={description} onChange={goToCreateTrip()} placeholder="Descrição" type ='string' pattern={"^[A-Z]{1,10}$"} required />
+                <input value={description} placeholder="Descrição" type ='string' pattern={"^[A-Z]{1,10}$"} required />
                 <input value={durationInDay} onChange={handleDurationInDay} placeholder="Duração da viagem" type ='number' min={50} required />
                 <button onClick={create}>Criar Viagem</button>
-                <button onClick={goToLastPage()}>Voltar</button>
+                <button onClick={()=> goToLastPage(history)}>Voltar</button>
             </form>
         </div>
     );

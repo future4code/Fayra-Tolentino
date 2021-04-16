@@ -17,6 +17,7 @@ export const TripDetails = () => {
     return (
         <div className="TripDetails">
             <p>Trip detail page</p>
+            <button onClick={history.goBack}>Voltar</button>
         </div>
     );
 }
