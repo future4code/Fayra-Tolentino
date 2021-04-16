@@ -3,7 +3,7 @@
 import React, {useState}  from 'react'
 import axios from 'axios'
 import {useHistory} from  'react-router-dom'
-import {goToAdminHome, goToTripDetails} from './../components/routes/cordinator'
+import {goToAdminHome} from './../components/routes/cordinator'
 
 
 export const LoginPage = () => {
@@ -17,7 +17,8 @@ export const LoginPage = () => {
     const handlePassword = (e) => {
         setPassword(e.target.value)
     }
-    const login = () =>{
+    const login = (event) =>{
+        event.preventDefault()
         const body = {
             email:email,
             password:password
@@ -41,10 +42,10 @@ export const LoginPage = () => {
     return (
         <div>
             <h1>Login</h1>
-            <form>
+            <form onSubmit ={login}>
             <input value={email} onChange={handleEmail} placeholder="E-mail" type ='email' pattern={"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"} required />
             <input value={password} onChange={handlePassword} placeholder="Senha"  type ='string' required />
-            <button onClick={login}>Fazer login</button>
+            <button>Fazer login</button>
             </form>
         </div>
     )

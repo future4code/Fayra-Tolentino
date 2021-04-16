@@ -5,7 +5,7 @@ export const useProtectedPage = () => {
     const history = useHistory();
 
     useLayoutEffect(() => {
-    const token = localStorage.getItem("token");
+    const token = window.localStorage.getItem("token");
 
     if (!token) {
         history.push("/");
