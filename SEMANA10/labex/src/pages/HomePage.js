@@ -25,6 +25,7 @@ const ButtonStyled = styled.button `
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
     'Open Sans', 'Helvetica Neue', sans-serif;
     font-size:16px;
+    margin-right:32px;
     font-weight:600;
     letter-spacing:normal;
     text-align:center;
@@ -56,7 +57,7 @@ function Home() {
             <p>Encontre as melhores viagens espaciais!</p>
             <ButtonsContainer>
                 <ButtonStyled onClick={() => goToList(history)}>Ver Viagens</ButtonStyled>
-                <button onClick={() => goToLogin(history)}> Administrador</button>
+                <ButtonStyled onClick={() => goToLogin(history)}> Administrador</ButtonStyled>
             </ButtonsContainer>
         </HomePage>
     );
