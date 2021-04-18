@@ -32,7 +32,7 @@ function Router() {
             <Route exact path="/admin/trips/create">
                 <CreateTrip/>
             </Route>
-            <Route exact path="/admin/trips/id">
+            <Route exact path="/admin/trips/:id">
                 <TripDetails/>
             </Route>
             <Route>
