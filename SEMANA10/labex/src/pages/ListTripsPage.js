@@ -77,6 +77,8 @@ const ButtonStyled = styled.button `
     const SpanDetails =styled.span `
         font-weight:bold;
     `
+
+    
     
 // ----------------------------------------------------------------------------------------------------------------------
 
