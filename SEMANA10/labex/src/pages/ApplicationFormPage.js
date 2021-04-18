@@ -203,7 +203,7 @@ function Application() {
             <Title>Inscreva-se 🚀</Title>
             <DivForm>
                 <form onSubmit ={applicationTrip}>
-                    <SelectStyle value ={selectTrip} onChange={handleSelectTrip} required >{allTrips}</SelectStyle>
+                    <SelectStyle value ={selectTrip} onChange={handleSelectTrip} required  required>{allTrips}</SelectStyle>
                     <InputStyle value ={name} onChange={handleName} placeholder="Name" type ='string' pattern={"(.*[a-z]){2}"}  required ></InputStyle>
                     <InputStyle value ={age} onChange={handleAge} placeholder="Idade" type ='number' min = {18} required  ></InputStyle>
                     <InputStyle value ={applicationText} onChange={handleApplicationText} placeholder="Texto de Candidatura " pattern ={'^.{50,}$'} type ='string' required ></InputStyle>
