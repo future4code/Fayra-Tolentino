@@ -5,7 +5,47 @@ import {useProtectedPage} from '../hooks/useProtectedPage'
 import {goToCreateTrip,goToTripDetails} from './../components/routes/cordinator'
 import axios from 'axios'
 import {baseUrl} from '../components/Parameters'
+import Header from '../components/Header'
+import styled from 'styled-components'
 
+const HomeDiv = styled.div `
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding-top:4vh;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+`
+const Title = styled.h1 `
+    color:#250340;
+    font-size:3.2rem;
+`
+const TripsDiv = styled.div `
+    width:360px;
+    text-align:justify;
+    margin-top:8vh;
+    border-radius:5px;
+    border: 1px solid rgb(146,47,161);
+    padding:20px;
+    box-shadow: 10px 5px 5px #a4b0be;
+`
+const TripTitle = styled.h3 `
+        color:#922fa1;
+        font-size:1.60rem;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+        'Open Sans', 'Helvetica Neue', sans-serif;
+    `
+const ButtonCard = styled.button `
+    width:40px;
+    height:40px;
+    border-radius:5px;
+    margin-left:5px;
+`
+
+
+
+// ----------------------------------------------------------------------------------------------------------------------
 
 function AdminHome() {
     useProtectedPage ()
@@ -52,22 +92,25 @@ function AdminHome() {
     }
     const allTrips = tripList.trips && tripList.trips.map((trip)=>{
         return(
-            <div>
-                <h3>{trip.name}</h3>
-                <button onClick = {()=>deleteTrip(trip.id)}>Apagar</button>
-                <button  onClick = {()=>history.push(`/admin/trips/${trip.id}`) }>Detalhe</button>
-            </div>
+            <TripsDiv>
+                <TripTitle>{trip.name}</TripTitle>
+                <ButtonCard onClick = {()=>deleteTrip(trip.id)}>❌</ButtonCard>
+                <ButtonCard  onClick = {()=>history.push(`/admin/trips/${trip.id}`) }>➕</ButtonCard>
+            </TripsDiv>
         )
     })
 
     return (
-        <div className="Home">
-            <p>AdminHome</p>
-            {allTrips}
+        <HomeDiv>
+            <Header/>
+            <Title>Painel Administrativo</Title>
+            <div>
+                {allTrips}
+            </div>
             <button onClick={history.goBack}>Voltar</button>
             <button onClick={() => goToCreateTrip(history)}> Criar Viagem</button>
             {/* <button> Logout </button> */}
-        </div>
+        </HomeDiv>
     );
 }
 
