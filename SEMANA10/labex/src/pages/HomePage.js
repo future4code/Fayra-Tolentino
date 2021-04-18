@@ -34,8 +34,8 @@ const ButtonStyled = styled.button `
     border: 1px solid rgb(146, 148, 248);
     position: relative;
     overflow: hidden;
-    color:#250340;
-    background-color:transparent;
+    color:white;
+    background-color:#922fa1;
     &:hover {
         box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
     }
