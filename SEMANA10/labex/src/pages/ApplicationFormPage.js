@@ -5,6 +5,120 @@ import {goToLastPage,goToApplication} from '../components/routes/cordinator'
 import { useHistory,useParams } from "react-router-dom";
 import CountrySelector from '../components/buttons/CountrySelector';
 import {baseUrl} from '../components/Parameters'
+import Header from '../components/Header'
+import styled from 'styled-components'
+
+
+const ApplicationDiv = styled.div `
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding-top:4vh;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+`
+
+const Title = styled.h1 `
+    color:#250340;
+    font-size:3.2rem;
+`
+const ButtonComeback = styled.button `
+    height:40px;
+    width:120px;
+    border-radius:100px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+    'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:16px;
+    margin-left:-980px;
+    margin-top:48px;
+    font-weight:600;
+    letter-spacing:normal;
+    text-align:center;
+    text-decoration: none;
+    border: 1px solid rgb(146,47,161);
+    position: relative;
+    overflow: hidden;
+    color:#250340;
+    background-color:transparent;
+    &:hover {
+        box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+    }
+    &:before {
+        background: linear-gradient(120deg,transparent,rgba(146, 148, 248, 0.4),transparent);
+        transition: all 650ms;
+    }
+    &:hover:before {
+        left: 100%;
+    }
+`
+const DivForm = styled.div `
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:30vw;
+    margin-top:-10px;
+    display:flex;
+    flex-direction:column;
+    /* padding-left:8vw; */
+`
+const InputStyle = styled.input `
+    width:400px;
+    height: 28px;
+    color:#922fa1;
+    font-weight:bold;
+    border-radius:100px;
+    border: 1px solid rgb(146,47,161);
+    margin-top:12px;
+    outline:none;
+    padding-left:10px;
+`
+const SelectStyle = styled.select `
+    width:410px;
+    height: 35px;
+    color:#922fa1;
+    font-weight:bold;
+    border-radius:100px;
+    border: 1px solid rgb(146,47,161);
+    margin-top:12px;
+    outline:none;
+    padding-left:10px;
+`
+const CountryGambs = styled.div `
+    margin-top:20px;
+    border: 1px solid rgb(146,47,161);
+`
+const ButtonStyled = styled.button `
+    height:40px;
+    width:200px;
+    border-radius:100px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+    'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:16px;
+    margin-left:110px;
+    margin-top:30px;
+    font-weight:600;
+    letter-spacing:normal;
+    text-align:center;
+    text-decoration: none;
+    border: 1px solid rgb(146,47,161);
+    position: relative;
+    overflow: hidden;
+    color:white;
+    background-color:#922fa1;
+    &:hover {
+        box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+    }
+    &:before {
+        background: linear-gradient(120deg,transparent,rgba(146, 148, 248, 0.4),transparent);
+        transition: all 650ms;
+    }
+    &:hover:before {
+        left: 100%;
+    }
+`
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
 
 function Application() {
     const [tripList, setTripList] = useState([])
@@ -83,19 +197,24 @@ function Application() {
         })
     }
     return (
-        <div className="Application">
-            <p>Application page</p>
-            <form onSubmit ={applicationTrip}>
-                <select value ={selectTrip} onChange={handleSelectTrip} required >{allTrips}</select>
-                <input value ={name} onChange={handleName} placeholder="Name" type ='string' pattern={"(.*[a-z]){2}"}  required ></input>
-                <input value ={age} onChange={handleAge} placeholder="Idade" type ='number' min = {18} required  ></input>
-                <input value ={applicationText} onChange={handleApplicationText} placeholder="Texto de Candidatura " pattern ={'^.{50,}$'} type ='string' required ></input>
-                <input value ={profession} onChange={handleProfession} placeholder="Profissão " pattern={"(.*[a-z]){10}"} type ='string' required ></input>
-                <CountrySelector handleCountry= {handleCountry}/>
-                <button type ="submit"> Enviar </button>
-            </form>
-            <button onClick={()=>goToLastPage(history)}>Voltar</button>
-        </div>
+        < ApplicationDiv>
+            <Header/>
+            <ButtonComeback onClick={()=>goToLastPage(history)}>Voltar</ButtonComeback>
+            <Title>Inscreva-se 🚀</Title>
+            <DivForm>
+                <form onSubmit ={applicationTrip}>
+                    <SelectStyle value ={selectTrip} onChange={handleSelectTrip} required >{allTrips}</SelectStyle>
+                    <InputStyle value ={name} onChange={handleName} placeholder="Name" type ='string' pattern={"(.*[a-z]){2}"}  required ></InputStyle>
+                    <InputStyle value ={age} onChange={handleAge} placeholder="Idade" type ='number' min = {18} required  ></InputStyle>
+                    <InputStyle value ={applicationText} onChange={handleApplicationText} placeholder="Texto de Candidatura " pattern ={'^.{50,}$'} type ='string' required ></InputStyle>
+                    <InputStyle value ={profession} onChange={handleProfession} placeholder="Profissão " pattern={"(.*[a-z]){10}"} type ='string' required ></InputStyle>
+                    <CountryGambs>
+                    <CountrySelector handleCountry= {handleCountry} />
+                    </CountryGambs>
+                    <ButtonStyled type ="submit"> Enviar </ButtonStyled>
+                </form>
+            </DivForm>
+        </ ApplicationDiv>
     )
 }
 
