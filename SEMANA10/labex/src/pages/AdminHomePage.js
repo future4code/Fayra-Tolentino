@@ -42,6 +42,64 @@ const ButtonCard = styled.button `
     border-radius:5px;
     margin-left:5px;
 `
+const ButtonComeback = styled.button `
+    height:40px;
+    width:120px;
+    border-radius:100px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+    'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:16px;
+    margin-left:-980px;
+    margin-top:80px;
+    font-weight:600;
+    letter-spacing:normal;
+    text-align:center;
+    text-decoration: none;
+    border: 1px solid rgb(146,47,161);
+    position: relative;
+    overflow: hidden;
+    color:#250340;
+    background-color:transparent;
+    &:hover {
+        box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+    }
+    &:before {
+        background: linear-gradient(120deg,transparent,rgba(146, 148, 248, 0.4),transparent);
+        transition: all 650ms;
+    }
+    &:hover:before {
+        left: 100%;
+    }
+`
+const ButtonStyled = styled.button `
+    height:40px;
+    width:200px;
+    border-radius:100px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+    'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:16px;
+    /* margin-left:10px; */
+    margin-top:30px;
+    font-weight:600;
+    letter-spacing:normal;
+    text-align:center;
+    text-decoration: none;
+    border: 1px solid rgb(146,47,161);
+    position: relative;
+    overflow: hidden;
+    color:white;
+    background-color:#922fa1;
+    &:hover {
+        box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+    }
+    &:before {
+        background: linear-gradient(120deg,transparent,rgba(146, 148, 248, 0.4),transparent);
+        transition: all 650ms;
+    }
+    &:hover:before {
+        left: 100%;
+    }
+`
 
 
 
@@ -103,12 +161,12 @@ function AdminHome() {
     return (
         <HomeDiv>
             <Header/>
+            <ButtonComeback onClick={history.goBack}>Voltar</ButtonComeback>
             <Title>Painel Administrativo</Title>
+            <ButtonStyled onClick={() => goToCreateTrip(history)}> Criar Viagem</ButtonStyled>
             <div>
                 {allTrips}
             </div>
-            <button onClick={history.goBack}>Voltar</button>
-            <button onClick={() => goToCreateTrip(history)}> Criar Viagem</button>
             {/* <button> Logout </button> */}
         </HomeDiv>
     );
