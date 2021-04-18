@@ -66,7 +66,7 @@ function AdminHome() {
             {allTrips}
             <button onClick={history.goBack}>Voltar</button>
             <button onClick={() => goToCreateTrip(history)}> Criar Viagem</button>
-            <button> Logout </button>
+            {/* <button> Logout </button> */}
         </div>
     );
 }
