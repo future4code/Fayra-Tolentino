@@ -5,6 +5,7 @@ import React from 'react'
 import {goToList,goToLogin} from '../components/routes/cordinator'
 import { useHistory } from "react-router-dom";
 import styled from 'styled-components'
+import Header from '../components/Header'
 
 const HomePage = styled.div `
     display:flex;
@@ -62,6 +63,7 @@ function Home() {
     const history = useHistory();
     return (
         <HomePage>
+            <Header/>
             <Title>LabeX</Title>
             <SubTitle>Encontre as melhores viagens espaciais!</SubTitle>
             <ButtonsContainer>
