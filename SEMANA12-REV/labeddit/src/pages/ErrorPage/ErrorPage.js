@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CreatePost =()=>{
+export const ErrorPage =()=>{
     return(
         <div>
             <h1> Create Post page</h1>
@@ -8,4 +8,4 @@ export const CreatePost =()=>{
     )
 }
 
-export default CreatePost;
+export default ErrorPage;
