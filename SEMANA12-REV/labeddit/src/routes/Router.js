@@ -22,7 +22,7 @@ export const Router = () =>{
                     <CreatePost/>
                 </Route>
 
-                <Route exact path = '/signUp'>
+                <Route exact path = '/sign-up'>
                     <SignUp/>
                 </Route>
 
