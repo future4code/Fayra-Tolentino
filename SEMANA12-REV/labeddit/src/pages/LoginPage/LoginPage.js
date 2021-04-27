@@ -1,11 +1,25 @@
 import React from 'react'
+import { InputContainer, ScreenContainer } from './StyledLogin';
+import { InputUser } from '../../components/InputUser'
+import TextField from '@material-ui/core/TextField';
 
-export const Login =()=>{
+
+export const LoginPage =()=>{
+    const onSubmitForm = () =>{
+
+    }
     return(
-        <div>
+        <ScreenContainer>
             <h1> Login page</h1>
-        </div>
+            <InputContainer>
+                <form>
+                    <InputUser/>
+                    <input/>
+                    <button>Entrar</button>
+                </form>
+            </InputContainer>
+        </ScreenContainer>
     )
 }
 
-export default Login;
+export default LoginPage;

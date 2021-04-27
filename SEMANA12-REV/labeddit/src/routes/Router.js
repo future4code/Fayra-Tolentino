@@ -1,11 +1,11 @@
 import React from 'react'
 import {BrowserRouter,Switch,Route} from 'react-router-dom'
-import { Login } from '../pages/LoginPage/LoginPage'
 import { Feed } from '../pages/FeedPage/FeedPage'
 import {CreatePost} from '../pages/CreatePostPage/CreatePostPage'
 import {SignUp} from '../pages/SignUpPage/SignUp'
 import { ErrorPage } from '../pages/ErrorPage/ErrorPage'
 import Header from '../components/Header/Header'
+import LoginPage from '../pages/LoginPage/LoginPage'
 
 export const Router = () =>{
     return(
@@ -13,7 +13,7 @@ export const Router = () =>{
             <Header/>
             <Switch>
                 <Route exact path = '/login'>
-                    <Login/>
+                    <LoginPage/>
                 </Route>
 
                 <Route exact path = '/'>
