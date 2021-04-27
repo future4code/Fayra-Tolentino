@@ -2,6 +2,7 @@ import React from 'react'
 import { InputContainer, ScreenContainer } from './StyledLogin';
 import { InputUser } from '../../components/InputUser'
 import TextField from '@material-ui/core/TextField';
+import PassWordInput from '../../components/PasswordInput';
 
 
 export const LoginPage =()=>{
@@ -14,7 +15,7 @@ export const LoginPage =()=>{
             <InputContainer>
                 <form>
                     <InputUser/>
-                    <input/>
+                    <PassWordInput/>
                     <button>Entrar</button>
                 </form>
             </InputContainer>
