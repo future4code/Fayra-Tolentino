@@ -22,10 +22,10 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
         <div className={classes.margin}>
             <Grid container spacing={1} alignItems="flex-end">
             <Grid item>
-                <AccountCircle />
+                <TextField id="input-with-icon-grid" value= {props.email} onChange ={props.onChange} name = {'email'}label="Digite seu e-mail" />
             </Grid>
             <Grid item>
-                <TextField id="input-with-icon-grid" value= {props.email} onChange ={props.onChange} name = {'email'}label="Digite seu e-mail" />
+                <AccountCircle />
             </Grid>
             </Grid>
         </div>

@@ -1,29 +1,28 @@
 import React from 'react'
-import { InputContainer, ScreenContainer } from './StyledLogin';
+import { InputContainer, ScreenContainer, SignUpBotton } from './StyledLogin';
 import { InputUser } from '../../components/InputUser'
-import TextField from '@material-ui/core/TextField';
 import PassWordInput from '../../components/PasswordInput';
-import useForm from '../../hooks/useForm'
-// import { useHistory } from 'react-router';
+import { Button } from '@material-ui/core';
+import LoginForm from './LoginForm';
+import { useHistory } from 'react-router';
+import { goToSignUp } from '../../routes/coordinator';
 
 
 export const LoginPage =()=>{
-    // const history =useHistory()
-    const [form,onChange,clear] =useForm({email:'', password:''})
-    const onSubmitForm = (event) =>{
-        event.preventDefault()
-        console.log(form)
-    }
+    const history = useHistory()
     return(
         <ScreenContainer>
             <h1> Login page</h1>
-            <InputContainer>
-                <form onSubmit ={onSubmitForm}>
-                    <InputUser email = {form.email} onChange={onChange}/>
-                    <PassWordInput password ={form.password} onChange ={onChange} />
-                    <button>Entrar</button>
-                </form>
-            </InputContainer>
+            <LoginForm/>
+            <SignUpBotton>
+            <Button     
+                        onClick ={()=>goToSignUp(history)}
+                        type ={'submit'}
+                        variant ={'text'}
+                        color ={'primary'}
+                    >   Não possue uma conta? Cadastre-se
+                    </Button>
+            </SignUpBotton>
         </ScreenContainer>
     )
 }
