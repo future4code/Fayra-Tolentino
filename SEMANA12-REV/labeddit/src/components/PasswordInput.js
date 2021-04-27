@@ -29,7 +29,7 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
     },
     }));
 
-    export default function PassWordInput() {
+    export default function PassWordInput(props) {
     const classes = useStyles();
     const [values, setValues] = React.useState({
         amount: '',
@@ -39,11 +39,11 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
         showPassword: false,
     });
 
-    const handleChange = (prop) => (event) => {
-        setValues({ ...values, [prop]: event.target.value });
+    const handleChange = (props) => (event) => {
+        setValues({ ...values, [props]: event.target.value });
     };
 
-    const handleClickShowPassword = () => {
+    const handleClickShowPassword = (props) => {
         setValues({ ...values, showPassword: !values.showPassword });
     };
 
@@ -59,8 +59,9 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
                 <Input
                     id="standard-adornment-password"
                     type={values.showPassword ? 'text' : 'password'}
-                    value={values.password}
-                    onChange={handleChange('password')}
+                    // value={values.password}
+                    // onChange={handleChange('password')}
+                    value= {props.password} onChange ={props.onChange} name = {'password'}
                     endAdornment={
                     <InputAdornment position="end">
                         <IconButton

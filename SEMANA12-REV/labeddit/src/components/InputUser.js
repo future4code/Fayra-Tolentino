@@ -14,7 +14,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
     },
     }));
 
-    export function InputUser() {
+    export function InputUser(props) {
     const classes = useStyles();
 
     return (
@@ -25,7 +25,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
                 <AccountCircle />
             </Grid>
             <Grid item>
-                <TextField id="input-with-icon-grid" label="Digite seu e-mail" />
+                <TextField id="input-with-icon-grid" value= {props.email} onChange ={props.onChange} name = {'email'}label="Digite seu e-mail" />
             </Grid>
             </Grid>
         </div>

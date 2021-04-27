@@ -5,7 +5,7 @@ const useForm = (initialState) =>{
 
     const handleInputChange = (event) =>{
         const{value,name} = event.target
-        setForm({...formatMs,[name]:value})
+        setForm({...form,[name]:value})
     }
 
     const clear = () => {
