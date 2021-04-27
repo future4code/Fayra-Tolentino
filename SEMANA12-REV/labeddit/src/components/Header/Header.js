@@ -8,12 +8,13 @@ import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import {goToSignUp} from '../../routes/coordinator'
+import {useHistory} from 'react-router-dom'
+
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -80,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const Header = () => {
+    const history = useHistory()
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -115,8 +117,10 @@ export const Header = () => {
         open={isMenuOpen}
         onClose={handleMenuClose}
         >
-        <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-        <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+        <MenuItem onClick={handleMenuClose}>Explorar</MenuItem>
+        <MenuItem onClick={handleMenuClose}>Posts Populares</MenuItem>
+        <MenuItem onClick={handleMenuClose}>Configurações</MenuItem>
+        <MenuItem onClick={()=> goToSignUp(history)}>Sair</MenuItem>
         </Menu>
     );
 
@@ -131,22 +135,6 @@ export const Header = () => {
         open={isMobileMenuOpen}
         onClose={handleMobileMenuClose}
         >
-        <MenuItem>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-            <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-            </Badge>
-            </IconButton>
-            <p>Messages</p>
-        </MenuItem>
-        <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-            <Badge badgeContent={11} color="secondary">
-                <NotificationsIcon />
-            </Badge>
-            </IconButton>
-            <p>Notifications</p>
-        </MenuItem>
         <MenuItem onClick={handleProfileMenuOpen}>
             <IconButton
             aria-label="account of current user"
@@ -165,16 +153,8 @@ export const Header = () => {
         <div className={classes.grow}>
         <AppBar position="static">
             <Toolbar>
-            <IconButton
-                edge="start"
-                className={classes.menuButton}
-                color="inherit"
-                aria-label="open drawer"
-            >
-                <MenuIcon />
-            </IconButton>
             <Typography className={classes.title} variant="h6" noWrap>
-                Material-UI
+                Labeddit
             </Typography>
             <div className={classes.search}>
                 <div className={classes.searchIcon}>
@@ -191,11 +171,6 @@ export const Header = () => {
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
-                <IconButton aria-label="show 4 new mails" color="inherit">
-                <Badge badgeContent={4} color="secondary">
-                    <MailIcon />
-                </Badge>
-                </IconButton>
                 <IconButton aria-label="show 17 new notifications" color="inherit">
                 <Badge badgeContent={17} color="secondary">
                     <NotificationsIcon />
