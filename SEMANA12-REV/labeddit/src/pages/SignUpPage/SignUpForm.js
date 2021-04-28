@@ -11,6 +11,7 @@ export const SignUpForm =()=>{
     const [form,onChange,clear] =useForm({username:'', email:'', password:''})
     const onSubmitForm = (event) =>{
         event.preventDefault()
+        clear()
         console.log(form)
     }
     return(

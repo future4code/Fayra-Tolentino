@@ -12,11 +12,11 @@ export const Router = () =>{
         <BrowserRouter>
             <Header/>
             <Switch>
-                <Route exact path = '/login'>
+                <Route exact path = '/'>
                     <LoginPage/>
                 </Route>
 
-                <Route exact path = '/'>
+                <Route exact path = '/feed'>
                     <Feed/>
                 </Route>
 

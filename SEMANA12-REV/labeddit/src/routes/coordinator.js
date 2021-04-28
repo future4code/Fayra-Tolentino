@@ -1,9 +1,9 @@
 export const goToLogin = (history) => {
-    history.push('/login')
+    history.push('/')
 }
 
 export const goToFeed = (history) => {
-    history.push('/')
+    history.push('/feed')
 }
 
 export const goToCreatePost = (history,id) => {
