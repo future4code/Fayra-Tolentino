@@ -12,8 +12,8 @@ export const login = (body,clear,history) =>{
         goToFeed(history)
     })
     .catch((err)=>{
-        console.log(err)
-        alert('Erro no login')
+        // console.log(err)
+        alert(err.response.data.message)
     })
 }
 
@@ -27,8 +27,8 @@ export const signUp = (body,clear,history) =>{
         goToLogin(history)
     })
     .catch((err)=>{
-        console.log(err)
-        alert('Erro no cadastro')
+        // console.log(err)
+        alert(err.response.data.message)
     })
 }
 
