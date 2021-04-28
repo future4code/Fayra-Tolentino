@@ -1,11 +1,11 @@
 import React from 'react'
-import { InputContainer} from './StyledLogin';
+import { InputContainer} from './StyledLogin'
 import { InputUser } from '../../components/InputUser'
-import PassWordInput from '../../components/PasswordInput';
+import PassWordInput from '../../components/PasswordInput'
 import useForm from '../../hooks/useForm'
-import { Button } from '@material-ui/core';
-import axios from 'axios'
-import {BASE_URL} from '../../constants/urls'
+import { Button } from '@material-ui/core'
+import {login} from '../../services/userRequest'
+
 
 
 export const LoginForm =()=>{
@@ -13,21 +13,7 @@ export const LoginForm =()=>{
     
     const onSubmitForm = (event) =>{
         event.preventDefault()
-        login()
-    }
-
-    const login = () =>{
-        axios
-        .post(`${BASE_URL}/login` , form)
-        .then((res)=>{
-            console.log(res)
-            localStorage.setItem('token',res.data.token)
-            clear()
-        })
-        .catch((err)=>{
-            console.log(err)
-            alert('Erro no login')
-        })
+        login(form,clear)
     }
 
     return(
