@@ -5,14 +5,17 @@ import PassWordInput from '../../components/PasswordInput';
 import useForm from '../../hooks/useForm'
 import { Button } from '@material-ui/core';
 import InputName from '../../components/InputName';
+import { useHistory } from 'react-router';
+import { signUp } from '../../services/userRequest';
 
 
 export const SignUpForm =()=>{
     const [form,onChange,clear] =useForm({username:'', email:'', password:''})
+    const history = useHistory()
+    
     const onSubmitForm = (event) =>{
         event.preventDefault()
-        clear()
-        console.log(form)
+        signUp(form,clear,history)
     }
     return(
             <InputContainer>
@@ -25,7 +28,7 @@ export const SignUpForm =()=>{
                         fullWidth
                         variant ={'contained'}
                         color ={'primary'}
-                    >   Cadastre-se
+                    >   Cadastrar
                     </Button>
                 </form>
             </InputContainer>
