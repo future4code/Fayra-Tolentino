@@ -20,7 +20,7 @@ export const Router = () =>{
                     <Feed/>
                 </Route>
 
-                <Route exact path = '/createPost/:id'>
+                <Route exact path = '/createpost'>
                     <CreatePost/>
                 </Route>
 
