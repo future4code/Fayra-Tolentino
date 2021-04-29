@@ -56,8 +56,9 @@
             </Avatar>
             }
             title={props.title}
-            subheader={props.userName}
-            // subheader={props.date}
+
+            subheader={`${props.date} ${'-'} ${props.userName}`}
+    
         />
         <CardContent>
             <Typography variant="body2" color="textSecondary" component="p">

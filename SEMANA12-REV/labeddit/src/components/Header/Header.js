@@ -16,6 +16,7 @@ import {goToSignUp} from '../../routes/coordinator'
 import {useHistory} from 'react-router-dom'
 
 
+
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -156,7 +157,7 @@ export const Header = () => {
             <Typography className={classes.title} variant="h6" noWrap>
                 Labeddit
             </Typography>
-            <div className={classes.search}>
+            {/* <div className={classes.search}>
                 <div className={classes.searchIcon}>
                 <SearchIcon />
                 </div>
@@ -168,14 +169,15 @@ export const Header = () => {
                 }}
                 inputProps={{ 'aria-label': 'search' }}
                 />
-            </div>
+            </div> */}
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
-                <IconButton aria-label="show 17 new notifications" color="inherit">
+              {/* colocar a quantidade de posts curtidos depois */}
+                {/* <IconButton aria-label="show 17 new notifications" color="inherit">
                 <Badge badgeContent={17} color="secondary">
                     <NotificationsIcon />
                 </Badge>
-                </IconButton>
+                </IconButton> */}
                 <IconButton
                 edge="end"
                 aria-label="account of current user"
