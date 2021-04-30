@@ -1,7 +1,5 @@
 import React from 'react'
-import { InputContainer, ScreenContainer, SignUpBotton } from './StyledLogin';
-// import { InputUser } from '../../components/InputUser'
-// import PassWordInput from '../../components/PasswordInput';
+import { ScreenContainer, SignUpBotton } from './StyledLogin';
 import { Button } from '@material-ui/core';
 import LoginForm from './LoginForm';
 import { useHistory } from 'react-router';

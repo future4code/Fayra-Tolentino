@@ -11,14 +11,13 @@ import { makeStyles } from '@material-ui/core/styles';
     },
     }));
 
-    export default function InputTitle() {
+    export default function InputTitle(props) {
     const classes = useStyles();
-
     return (
         <form className={classes.root} noValidate autoComplete="off">
         <div>
-            <TextField required id="standard-required" label="Título"/>
+            <TextField required id="standard-required" label="Título" value= {props.title} onChange ={props.onChange} name = {'title'}/>
         </div>
         </form>
-    );
+    )
     }

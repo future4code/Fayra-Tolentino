@@ -7,12 +7,9 @@ import { Button } from '@material-ui/core'
 import {login} from '../../services/userRequest'
 import { useHistory } from 'react-router'
 
-
-
 export const LoginForm =()=>{
     const [form,onChange,clear] =useForm({email:'', password:''})
     const history = useHistory()
-    
     const onSubmitForm = (event) =>{
         event.preventDefault()
         login(form,clear,history)
