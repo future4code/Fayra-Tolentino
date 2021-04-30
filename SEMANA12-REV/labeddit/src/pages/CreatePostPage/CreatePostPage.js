@@ -1,27 +1,12 @@
 import React from 'react'
-import useProtectedPage from '../../hooks/useProtectedPage'
-import TextField from '@material-ui/core/TextField'
-import { InputContainer, ScreenContainer } from './StyledCreatePost'
-import {CreateBotton} from './StyledCreatePost'
+import CreatePostForm from './CreatePostForm'
 
 
-
-export const CreatePost =()=>{
-    useProtectedPage()
+export const CreatePost = ()=>{
     return(
-        <ScreenContainer>
-            <h1> Create Post page</h1>
-            <form  noValidate autoComplete="off">
-                <InputContainer>
-                    <TextField id="standard-basic" label="Título" />
-                    <TextField id="standard-basic" label="Texto" />
-                </InputContainer>
-                <CreateBotton>Botão</CreateBotton>
-            </form>
-        </ScreenContainer> 
-            
+        <div>
+            <h1>Adicionar Notícia</h1>
+            <CreatePostForm/>
+        </div>
     )
 }
-
-export default CreatePost;
-

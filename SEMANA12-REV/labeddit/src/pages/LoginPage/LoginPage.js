@@ -8,7 +8,6 @@ import { useHistory } from 'react-router';
 import { goToSignUp } from '../../routes/coordinator';
 import useUnprotectedPage from '../../hooks/useUnprotectedPage';
 
-
 export const LoginPage =()=>{
     useUnprotectedPage()
     const history = useHistory()
