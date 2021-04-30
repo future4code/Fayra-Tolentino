@@ -23,6 +23,7 @@ export const signUp = (body,clear,history) =>{
     .then((res)=>{
         console.log(res)
         localStorage.setItem('token',res.data.token)
+        alert('Usuari@ criado com sucesso!')
         clear()
         goToLogin(history)
     })
