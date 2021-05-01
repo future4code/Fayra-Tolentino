@@ -10,10 +10,10 @@ export const create = (body,clear,history) =>{
         },
     })
     .then((res)=>{
+        clear()
         console.log(res)
         localStorage.setItem('token',res.data.token)
         console.log(res)
-        clear()
         goToFeed(history)
     })
     .catch((err)=>{
