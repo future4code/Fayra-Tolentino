@@ -5,10 +5,11 @@ const useRequestData = ( initialData, url) =>{
     const [data, setData] = useState(initialData)
 
     useEffect(() => {
+        console.log(window.localStorage.getItem('token'))
         axios
         .get(url,{
             headers:{
-                Authorization:localStorage.getItem('token')
+                Authorization:window.localStorage.getItem('token')
             }
         })
         .then ((response)=>{

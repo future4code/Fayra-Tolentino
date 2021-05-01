@@ -2,16 +2,18 @@ import axios from 'axios'
 import {BASE_URL} from '../constants/urls'
 import {goToFeed, goToLogin} from '../routes/coordinator'
 
+
 export const login = (body,clear,history) =>{
     axios
     .post(`${BASE_URL}/login`, body)
     .then((res)=>{
-        console.log(res)
         localStorage.setItem('token',res.data.token)
+        console.log(res)
         clear()
         goToFeed(history)
     })
     .catch((err)=>{
+        console.log(err)
         alert(err.response.data.message)
     })
 }
@@ -27,6 +29,7 @@ export const signUp = (body,clear,history) =>{
         goToLogin(history)
     })
     .catch((err)=>{
+        console.log(err)
         alert(err.response.data.message)
     })
 }

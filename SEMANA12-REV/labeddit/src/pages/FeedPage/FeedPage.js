@@ -25,7 +25,6 @@ export const Feed =()=>{
                 date ={postCard.createdAt}
             /> 
         )
-
     })
 
     return(

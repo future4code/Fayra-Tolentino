@@ -11,13 +11,15 @@ export const create = (body,clear,history) =>{
     })
     .then((res)=>{
         clear()
-        console.log(res)
-        localStorage.setItem('token',res.data.token)
-        console.log(res)
+        console.log(res.data)
+        // Estava sobreescrevendo o token
+        // localStorage.setItem('token',res.data.token)
+        // console.log(res)
         goToFeed(history)
     })
     .catch((err)=>{
         console.log(err)
         alert(err.response.data.message)
+        goToFeed(history)
     })
 }
