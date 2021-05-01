@@ -1,11 +1,14 @@
 import React from 'react'
+import Router from './routes/routes'
 
-export const App =()=>{
-    return(
-        <div>
-            <h1> Teste App</h1>
-        </div>
-    )
+
+
+const App = ()=> {
+return (
+    <div>
+        <Router/>
+    </div>
+)
 }
 
 export default App;

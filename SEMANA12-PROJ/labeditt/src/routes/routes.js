@@ -3,7 +3,7 @@ import {BrowserRouter,Switch,Route} from 'react-router-dom'
 import LoginPage from '../pages/LoginPage/LoginPage'
 import FeedPage from '../pages/FeedPage/FeedPage'
 import CreatePostPage from '../pages/CreatePostPage/CreatePostPage'
-import PostDetailPage from '../pages/PostDetailPage/PostDetailPage'
+import PostDetailPage from '../pages/PostDetailsPage/PostDetailsPage'
 import SignUpPage from '../pages/SignUpPage/SignUpPage'
 import ErrorPage from '../pages/ErrorPage/ErrorPage'
 
