@@ -1,3 +1,5 @@
+// Material Ui que deu bem errado e não consigo editar    
+    
     import React from 'react'
     import { makeStyles } from '@material-ui/core/styles'
     import Card from '@material-ui/core/Card'
@@ -10,26 +12,13 @@
     import Typography from '@material-ui/core/Typography'
     import FavoriteIcon from '@material-ui/icons/Favorite'
     import ThumbDownRoundedIcon from '@material-ui/icons/ThumbDownRounded'
-    import ShareIcon from '@material-ui/icons/Share';
+    import ShareIcon from '@material-ui/icons/Share'
     import {secondaryColor} from '../../constants/colors'
+    
 
     const useStyles = makeStyles((theme) => ({
     root: {
-        maxWidth: 345,
-    },
-    media: {
-        height: 0,
-        paddingTop: '56.25%', // 16:9
-    },
-    expand: {
-        transform: 'rotate(0deg)',
-        marginLeft: 'auto',
-        transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-        }),
-    },
-    expandOpen: {
-        transform: 'rotate(180deg)',
+        maxWidth: 600,
     },
     avatar: {
         backgroundColor: secondaryColor,
@@ -79,6 +68,11 @@
             </Typography>
             </CardContent>
         </Collapse>
+    
         </Card>
     );
     }
+
+
+
+

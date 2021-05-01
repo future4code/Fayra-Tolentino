@@ -15,6 +15,7 @@ export const create = (body,clear,history) =>{
         // Estava sobreescrevendo o token
         // localStorage.setItem('token',res.data.token)
         // console.log(res)
+        alert("Post Criado com sucesso!")
         goToFeed(history)
     })
     .catch((err)=>{
