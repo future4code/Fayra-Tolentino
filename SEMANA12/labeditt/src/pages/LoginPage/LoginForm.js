@@ -3,10 +3,9 @@ import useForm from '../../hooks/useForm'
 import { Button } from '@material-ui/core'
 import {login} from '../../services/userRequest'
 import { useHistory } from 'react-router'
-import InputUser from '../../components/Inputs/InputUser'
+import InputEmail from '../../components/Inputs/InputEmail'
 import PassWordInput from '../../components/Inputs/PasswordInput'
 import { goToSignUp } from '../../routes/coordinator'
-// import styled from 'styled-components'
 import {ScreenContainer, InputContainer, LoginContainer, SignUpButton} from './StyledLoginForm'
 
 
@@ -23,9 +22,8 @@ export const LoginForm =()=>{
             <ScreenContainer>
                 <form onSubmit ={onSubmitForm}>
                     <LoginContainer>
-                            <InputUser email = {form.email} onChange={onChange} require/>
+                            <InputEmail email = {form.email} onChange={onChange} require/>
                             <PassWordInput password ={form.password} onChange ={onChange} require />
-                        {/* <LoginButton> */}
                             <Button
                                 type ={'submit'}
                                 fullWidth
@@ -33,7 +31,6 @@ export const LoginForm =()=>{
                                 color ={'primary'}
                             >   Entrar
                             </Button>
-                        {/* </LoginButton> */}
 
                         <SignUpButton>
                             <Button     
