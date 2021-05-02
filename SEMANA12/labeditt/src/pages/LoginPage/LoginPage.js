@@ -1,13 +1,16 @@
 import React from  'react'
 import LoginForm from './LoginForm'
+import { ScreenContainer } from './StyledLoginForm';
+import TitlesStyle from '../CreatePostPage/StyledCreatePost'
+
 
 
 export const LoginPage = () =>{
     return(
-        <div>
-            <p>Login Page</p>
+        <ScreenContainer>
+            <TitlesStyle>Login Page</TitlesStyle>
                 <LoginForm/>
-        </div>
+        </ScreenContainer>
     )
 }
 

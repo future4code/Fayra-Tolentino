@@ -5,6 +5,10 @@ import {login} from '../../services/userRequest'
 import { useHistory } from 'react-router'
 import InputUser from '../../components/Inputs/InputUser'
 import PassWordInput from '../../components/Inputs/PasswordInput'
+import { goToSignUp } from '../../routes/coordinator'
+// import styled from 'styled-components'
+import {ScreenContainer, InputContainer, LoginContainer, SignUpButton} from './StyledLoginForm'
+
 
 
 export const LoginForm =()=>{
@@ -16,19 +20,33 @@ export const LoginForm =()=>{
     }
 
     return(
-            <div>
+            <ScreenContainer>
                 <form onSubmit ={onSubmitForm}>
-                    <InputUser email = {form.email} onChange={onChange} require/>
-                    <PassWordInput password ={form.password} onChange ={onChange} require />
-                    <Button
-                        type ={'submit'}
-                        fullWidth
-                        variant ={'contained'}
-                        color ={'primary'}
-                    >   Entrar
-                    </Button>
+                    <LoginContainer>
+                            <InputUser email = {form.email} onChange={onChange} require/>
+                            <PassWordInput password ={form.password} onChange ={onChange} require />
+                        {/* <LoginButton> */}
+                            <Button
+                                type ={'submit'}
+                                fullWidth
+                                variant ={'contained'}
+                                color ={'primary'}
+                            >   Entrar
+                            </Button>
+                        {/* </LoginButton> */}
+
+                        <SignUpButton>
+                            <Button     
+                            onClick ={()=>goToSignUp(history)}
+                            type ={'submit'}
+                            variant ={'text'}
+                            color ={'primary'}
+                            >   Não possue uma conta? Cadastre-se
+                            </Button>
+                        </SignUpButton>
+                    </LoginContainer>
                 </form>
-            </div>
+            </ScreenContainer>
     )
 }
 
