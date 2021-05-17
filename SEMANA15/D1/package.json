@@ -1,0 +1,11 @@
+{
+  "name": "D1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Fayra Miranda",
+  "license": "MIT",
+  "dependencies": {
+    "node": "^16.1.0",
+    "typescript": "^4.2.4"
+  }
+}
