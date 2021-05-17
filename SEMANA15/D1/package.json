@@ -2,6 +2,9 @@
   "name": "D1",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "exNode":"node index.js"
+  },
   "author": "Fayra Miranda",
   "license": "MIT",
   "dependencies": {
