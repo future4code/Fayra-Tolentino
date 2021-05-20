@@ -84,8 +84,13 @@
 // tarefa em uma variável que represente uma lista de tarefas. A lista de tarefas pode estar criada antes da 
 // execução do código. Após adicionar o item à lista, exiba a lista atualizada.
 
-const listaTarefa = ['warm-up']
+
 const tarefa = process.argv[2]
+const listaTarefa = ['warm-up']
 let addTarefa = listaTarefa.push(tarefa)
 
 console.log(`Suas tarefas são ${listaTarefa}`)
+
+// **************************************** Exercicio 4 ************************************************
+
+
