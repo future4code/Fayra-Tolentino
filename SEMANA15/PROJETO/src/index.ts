@@ -10,9 +10,26 @@ app.use(cors());
 type userCount ={
     name:string,
     cpf:number,
-    totalValue:number
+    totalValue:number,
+    birthDate:number
 }
 
+// let users:User[]=[
+let users = [
+    {
+        name: "Alice",
+        cpf: 78253689080,
+        totalValue: 1000,
+        birthDate:29021986
+    },
+    {
+        name: "Hernando",
+        cpf: 92491890011,
+        totalValue: 1000,
+        birthDate:29031996
+    },
+    
+]
 
 
 
