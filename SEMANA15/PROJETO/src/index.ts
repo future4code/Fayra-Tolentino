@@ -14,6 +14,15 @@ type userCount ={
     birthDate:number
 }
 
+type transactions ={
+    senderName:string,
+    senderCpf:number,
+    sendValue:number,
+    sendDate:string
+    receiverName:string,
+    receiverCpf:number,
+}
+
 // let users:User[]=[
 let users = [
     {
@@ -30,9 +39,6 @@ let users = [
     },
     
 ]
-
-
-
 
 const server = app.listen(process.env.PORT || 3003, () => {
     if (server) {
