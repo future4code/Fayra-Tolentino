@@ -61,6 +61,8 @@ type User ={
     statement:transaction[]
 }
 
+
+
 let users:User[]=[
     {
         name: "Alice",
@@ -82,10 +84,10 @@ let users:User[]=[
 
 app.post('/user',(req:Request,res:Response)=>{
     try{
-        if(!req.body.name|| !req.body.cpf|| !req.body.totalValue 
-            || !req.body.birthYear || !req.body.statement){
-            throw new Error ('Check your profile! Please, complete all informations.')
-        }
+        let userYear = req.body.birthYear 
+        const currentYear:number = 2021
+        let userAge:number = currentYear - userYear
+
         const reqBody: User = {
             name : req.body.name,
             cpf : req.body.cpf,
@@ -93,6 +95,16 @@ app.post('/user',(req:Request,res:Response)=>{
             birthYear:req.body.birthYear,
             statement:req.body.statement
         }
+        
+        if(userAge<18){
+            throw new Error('Underage user!')
+        }
+
+        if(!req.body.name|| !req.body.cpf|| !req.body.totalValue 
+            || !req.body.birthYear || !req.body.statement){
+            throw new Error ('Check your profile! Please, complete all informations.')
+        }
+
         users.push(reqBody)
         res
         .status(200)
