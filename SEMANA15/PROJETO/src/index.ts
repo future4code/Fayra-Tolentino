@@ -1,4 +1,4 @@
-import express from "express";
+import express , { Request, Response }from "express";
 import cors from "cors";
 import { AddressInfo } from "net";
 
@@ -57,7 +57,7 @@ type User ={
     name:string,
     cpf:number,
     totalValue:number,
-    birthDate:number,
+    birthYear:number,
     statement:transaction[]
 }
 
@@ -66,18 +66,42 @@ let users:User[]=[
         name: "Alice",
         cpf: 78253689080,
         totalValue: 1000,
-        birthDate:29021986,
+        birthYear:1986,
         statement:[]
     },
     {
         name: "Hernando",
         cpf: 92491890011,
         totalValue: 1000,
-        birthDate:29031996,
+        birthYear:1996,
         statement:[]
     },
     
 ]
+
+
+app.post('/user',(req:Request,res:Response)=>{
+    try{
+        const reqBody: User = {
+            name : req.body.name,
+            cpf : req.body.cpf,
+            totalValue :req.body.totalValue,
+            birthYear:req.body.birthYear,
+            statement:req.body.statement
+        }
+        users.push(reqBody)
+        res
+        .status(200)
+        .send({message:'Client criated!'})
+        console.table(users)
+    }catch(error){
+        res
+        .status(400)
+        .send({message:error.message})
+    }
+})
+
+
 
 const server = app.listen(process.env.PORT || 3003, () => {
     if (server) {
