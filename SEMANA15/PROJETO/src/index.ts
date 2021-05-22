@@ -82,6 +82,10 @@ let users:User[]=[
 
 app.post('/user',(req:Request,res:Response)=>{
     try{
+        if(!req.body.name|| !req.body.cpf|| !req.body.totalValue 
+            || !req.body.birthYear || !req.body.statement){
+            throw new Error ('Check your profile! Please, complete all informations.')
+        }
         const reqBody: User = {
             name : req.body.name,
             cpf : req.body.cpf,
@@ -92,7 +96,7 @@ app.post('/user',(req:Request,res:Response)=>{
         users.push(reqBody)
         res
         .status(200)
-        .send({message:'Client criated!'})
+        .send({message:'Client criated! Welcome to the LabeBank'})
         console.table(users)
     }catch(error){
         res
