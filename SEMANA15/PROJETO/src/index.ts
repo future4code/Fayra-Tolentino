@@ -66,14 +66,14 @@ let users:User[]=[
     {
         name: "Alice",
         cpf: 78253689080,
-        totalValue: 1000,
+        totalValue: 1234,
         birthYear:1986,
         statement:[]
     },
     {
         name: "Hernando",
         cpf: 92491890011,
-        totalValue: 1000,
+        totalValue: 5678,
         birthYear:1996,
         statement:[]
     },
@@ -100,7 +100,7 @@ app.post('/user',(req:Request,res:Response)=>{
         let checkCpf = users.find((user)=> user.cpf === cpf)
         if(checkCpf) throw new Error ('cpf already registered in the platform')
 
-        
+
         if(userAge<18){
             throw new Error('Underage user!')
         }
@@ -134,6 +134,25 @@ app.get('/users',(req:Request,res:Response)=>{
     }
 })
 
+app.get('/user/:cpf',(req:Request,res:Response)=>{
+    try{
+        const cpf = Number(req.params.cpf)
+        let checkCpf = users.find((user)=> user.cpf === cpf)
+        
+        if(!checkCpf) throw new Error ('cpf already is not registered in the platform')
+        const balance = checkCpf.totalValue
+        
+        // pq se eu colocar só balence .send(balance) aqui dá errado?
+        res
+        .send({totalValue:balance})
+        .status(200)
+
+    }catch(error){
+        res
+        .status(400)
+        .send({message:error.message})
+    }
+})
 
 const server = app.listen(process.env.PORT || 3003, () => {
     if (server) {
