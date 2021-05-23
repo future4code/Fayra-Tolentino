@@ -62,7 +62,6 @@ type User ={
 }
 
 
-
 let users:User[]=[
     {
         name: "Alice",
@@ -95,6 +94,12 @@ app.post('/user',(req:Request,res:Response)=>{
             birthYear:req.body.birthYear,
             statement:req.body.statement
         }
+        
+
+        const cpf = req.body.cpf
+        let checkCpf = users.find((user)=> user.cpf === cpf)
+        if(checkCpf) throw new Error ('cpf already registered in the platform')
+
         
         if(userAge<18){
             throw new Error('Underage user!')
