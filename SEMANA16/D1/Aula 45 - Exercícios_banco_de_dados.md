@@ -32,17 +32,19 @@ Foi possível identificar os seguintes resultados:
 
 - **Show Databases** → Retorna o nome e **informações dos banco de dados** que cada usuário possuí;
 
-![Aula%2045%20-%20Exerci%CC%81cios%20banco%20de%20dados%20e%20introduc%CC%A7a%CC%83%2016d22da1ff05443baa06dfe7d8491652/show_database.png](Aula%2045%20-%20Exerci%CC%81cios%20banco%20de%20dados%20e%20introduc%CC%A7a%CC%83%2016d22da1ff05443baa06dfe7d8491652/show_database.png)
+![show database](https://user-images.githubusercontent.com/52434685/119409570-dd259280-bcbd-11eb-84d0-d3c233e1807e.PNG)
 
 - **Show Tables** → Retorna a **lista de todas as tabelas existentes** no banco de daos atualmente ativo;
 
-![Aula%2045%20-%20Exerci%CC%81cios%20banco%20de%20dados%20e%20introduc%CC%A7a%CC%83%2016d22da1ff05443baa06dfe7d8491652/show_tables.png](Aula%2045%20-%20Exerci%CC%81cios%20banco%20de%20dados%20e%20introduc%CC%A7a%CC%83%2016d22da1ff05443baa06dfe7d8491652/show_tables.png)
+![show tables](https://user-images.githubusercontent.com/52434685/119409583-e44ca080-bcbd-11eb-858b-369d40d3856a.PNG)
+
 
 ***c. O comando `DESCRIBE` pode ser usado para ver estrutura de uma tabela. Utilize o comando  `DESCRIBE Actor` e explique os resultados.***
 
 O resultado obtido ao utilizar o comando Describe Nome_da_tabela, são as **propriedades da tabela** como o tipo dos dados e o nome dos mesmos.
 
-![Aula%2045%20-%20Exerci%CC%81cios%20banco%20de%20dados%20e%20introduc%CC%A7a%CC%83%2016d22da1ff05443baa06dfe7d8491652/describe.png](Aula%2045%20-%20Exerci%CC%81cios%20banco%20de%20dados%20e%20introduc%CC%A7a%CC%83%2016d22da1ff05443baa06dfe7d8491652/describe.png)
+![describe](https://user-images.githubusercontent.com/52434685/119409614-f3cbe980-bcbd-11eb-9cf9-db9fcf10259c.PNG)
+
 
 ### 🎫 Exercício 2 - O próximo passo é colocar dados nessa tabela. Vamos começar criando a linha de um ator brasileiro muito famoso.
 
