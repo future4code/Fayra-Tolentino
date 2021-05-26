@@ -9,6 +9,64 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
+// const updateActor = async (id: string, salary: number): Promise<any> => {
+//     await connection("Actor")
+//         .update({
+//         salary: salary,
+//         })
+//     .where("id", id);
+// };
+
+// app.put ("/users/update-salary",async(req:Request,res:Response)=>{
+//     try{
+//         const salary= req.params.salary
+//         console.log(await groupByGender(salary))
+//         res.end()
+//     }catch(error){
+//         console.log(error.message)
+//         res.status(500).send("Unexpected error")
+//     }
+// })
+
+
+// app.put("/users/update-salary/:id",async(req:Request,res:Response)=>{
+//     try{
+        
+//         const actorData ={
+//             name:req.body.name,
+//             salary:req.body.salary,
+//             birth_date: req.body.birth_date,
+//             gender:req.body.gender
+//         }
+//         await connection('Actor_Table').update(actorData).where({id:req.params.id})
+//     }catch(error){
+//         console.log(error.message)
+//         res.status(500).send("Unexpected error")
+//     }
+    
+// })
+
+app.put("/users/update-salary/:id",async(req:Request,res:Response)=>{
+    try{
+        
+        const actorData ={
+            salary:req.body.salary
+        }
+        await connection('Actor_Table').update(actorData).where({id:req.params.id})
+        res.send(actorData)
+    }catch(error){
+        console.log(error.message)
+        res.status(500).send("Unexpected error")
+    }
+    
+})
+
+
+
+
+
+
 const groupByGender = async(gender:string):Promise<any>=>{
     const  result =await connection.raw(`
         SELECT COUNT(*), gender from Actor_Table GROUP BY gender
