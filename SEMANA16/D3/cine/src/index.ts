@@ -9,18 +9,34 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const groupByGender = async(gender:string):Promise<any>=>{
+    const  result =await connection.raw(`
+        SELECT COUNT(*), gender from Actor_Table GROUP BY gender
+    `)
+    return result [0] [0]
+}
+
+app.get("/users/group-by-gender",async(req:Request, res:Response)=>{
+    try{
+        const gender = req.params.gender
+        console.log(await groupByGender(gender))
+        res.end()
+    }catch(error){
+        console.log(error.message)
+        res.status(500).send("Unexpected error")
+    }
+    
+})
+
 const getActorByName =async(name:string):Promise<any> =>{
     const result =await connection.raw(`
     SELECT * FROM Actor_Table WHERE name = '${name}'
     `)
-    console.log(result)
-    console.log
     return result [0] [0]
 }
 app.get("/users/:name",async(req:Request, res:Response)=>{
     try{
         const name = req.params.name
-        console.log(name)
         console.log(await getActorByName(name))
         res.end()
     }catch (error){
