@@ -39,14 +39,14 @@ app.post('/user',(req:Request,res:Response)=>{
             nickname : reqBody.nickname,
             email : reqBody.email
         }
-        
+
         users.push(newUser)
         res.status(200).send(newUser)
         console.log(newUser)
 
     }catch(error){
         res.status(400).send({message:error.message})
-        console.log('Deu ruim')
+        console.log({message:error.message})
     }
 })
 
