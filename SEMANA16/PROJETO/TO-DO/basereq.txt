@@ -1,0 +1,9 @@
+app.put('/user',(req:Request,res:Response)=>{
+    try{
+        console.log('Deu bom')
+        res.send('Uhuhuhu')
+    }catch(error){
+        console.log('Deu ruim')
+        res.send('Todo dia um 7x1 diferente')
+    }
+})
