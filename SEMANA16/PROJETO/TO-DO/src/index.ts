@@ -1,6 +1,10 @@
 import express,{Request,Response} from 'express'
 import cors from 'cors'
 import {AddressInfo} from 'net'
+import {connection} from './connection'
+
+
+
 
 const app = express()
 
@@ -27,7 +31,7 @@ let users: User[]=[
 app.use(express.json())
 app.use(cors())
 
-app.post('/user',(req:Request,res:Response)=>{
+app.post('/user',async(req:Request,res:Response)=>{
     const reqBody = req.body
     try{
         
@@ -39,8 +43,12 @@ app.post('/user',(req:Request,res:Response)=>{
             nickname : reqBody.nickname,
             email : reqBody.email
         }
-
-        users.push(newUser)
+        await connection('TodoListUser').insert({
+            name : reqBody.name,
+            nickname : reqBody.nickname,
+            email : reqBody.email
+        })
+        // users.push(newUser)
         res.status(200).send(newUser)
         console.log(newUser)
 
