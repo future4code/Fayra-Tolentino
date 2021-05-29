@@ -2,9 +2,7 @@ import express,{Request,Response} from 'express'
 import cors from 'cors'
 import {AddressInfo} from 'net'
 import {connection} from './connection'
-
-
-
+import knex from 'knex'
 
 const app = express()
 
@@ -13,20 +11,6 @@ type User ={
     nickname:string,
     email:string
 }
-
-let users: User[]=[
-    {
-        name:'Angela Montenegro',
-        nickname:'Montenegro',
-        email:'montenegro@jeffersonian.com'
-    },
-    {
-        name:'Jack Hodgins',
-        nickname:'Hodgins',
-        email:'hodgins@jeffersonian.com'
-    }
-]
-
 
 app.use(express.json())
 app.use(cors())
@@ -43,14 +27,41 @@ app.post('/user',async(req:Request,res:Response)=>{
             nickname : reqBody.nickname,
             email : reqBody.email
         }
-        await connection('TodoListUser').insert({
-            name : reqBody.name,
-            nickname : reqBody.nickname,
-            email : reqBody.email
-        })
-        // users.push(newUser)
-        res.status(200).send(newUser)
-        console.log(newUser)
+        await connection('TodoListUser').insert(newUser)
+        res.status(200).send(`Usuário(a) ${newUser.name} criado com sucesso ! `)
+
+    }catch(error){
+        res.status(400).send({message:error.message})
+        console.log({message:error.message})
+    }
+})
+
+async function getUserById(id: string): Promise<any>{
+
+	const result = await connection.raw(`
+		SELECT id, nickname FROM TodoListUser
+        WHERE id = "${id}"
+	`);
+	return result[0];
+}
+
+app.get('/user/:id',async(req:Request,res:Response)=>{
+    try{
+        const id = req.params.id
+        const result = await getUserById(id)
+        res.send(result)
+    }catch(error){
+        res.status(400).send({message:error.message})
+        console.log({message:error.message})
+    }
+})
+
+
+
+
+app.get('/user/:id',(req:Request,res:Response)=>{
+    try{
+        const id = req.params.id
 
     }catch(error){
         res.status(400).send({message:error.message})
