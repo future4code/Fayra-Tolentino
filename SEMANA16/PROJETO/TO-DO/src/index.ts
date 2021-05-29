@@ -36,19 +36,34 @@ app.post('/user',async(req:Request,res:Response)=>{
     }
 })
 
-async function getUserById(id: string): Promise<any>{
+// async function getUserById(id: string): Promise<any>{
 
-	const result = await connection.raw(`
-		SELECT id, nickname FROM TodoListUser
-        WHERE id = "${id}"
-	`);
-	return result[0];
-}
+// 	const result = await connection.raw(`
+// 		SELECT id, nickname FROM TodoListUser
+//         WHERE id = "${id}"
+// 	`);
+// 	return result[0];
+// }
+
+// app.get('/user/:id',async(req:Request,res:Response)=>{
+//     if(!req.params.id){
+//         throw new Error('User id is required!Please, insert the id you wish to search!')    }
+//     try{
+//         const id = req.params.id
+//         const result = await getUserById(id)
+//         res.send(result)
+//     }catch(error){
+//         res.status(400).send({message:error.message})
+//         console.log({message:error.message})
+//     }
+// })
 
 app.get('/user/:id',async(req:Request,res:Response)=>{
+    if(!req.params.id){
+        throw new Error('User id is required!Please, insert the id you wish to search!')}
     try{
-        const id = req.params.id
-        const result = await getUserById(id)
+        const idParams = req.params.id
+        const result = await connection('TodoListUser').select('id','name').where({id:idParams})
         res.send(result)
     }catch(error){
         res.status(400).send({message:error.message})
