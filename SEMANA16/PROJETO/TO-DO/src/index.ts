@@ -97,6 +97,18 @@ app.put('/user/edit/:id',async(req:Request,res:Response)=>{
     }
 })
 
+// Get Users
+
+app.get('/user/all',async(req:Request,res:Response)=>{
+    try{
+        const result = await connection('TodoListUser').select('*')
+        res.send(result)
+    }catch(error){
+        res.status(400).send({message:error.message})
+        console.log({message:error.message})
+    }
+})
+
 //Get User by Id
 
 app.get('/user/:id',async(req:Request,res:Response)=>{
