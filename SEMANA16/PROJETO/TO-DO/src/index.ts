@@ -112,6 +112,19 @@ app.get('/user/:id',async(req:Request,res:Response)=>{
     }
 })
 
+//Get tesk by Id
+app.get('/task/:id',async(req:Request,res:Response)=>{
+    if(!req.params.id){
+        throw new Error('Task id is required!Please, insert the id you wish to search!')}
+    try{
+        const idParams = req.params.id
+        const result = await connection('TaskTable').select('*').where({task_id :idParams})
+        res.send(result)
+    }catch(error){
+        res.status(400).send({message:error.message})
+        console.log({message:error.message})
+    }
+})
 
 //Server
 
