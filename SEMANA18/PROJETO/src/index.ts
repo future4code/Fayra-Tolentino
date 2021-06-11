@@ -1,11 +1,15 @@
-import express, {Express} from 'express'
+import express, {Express, Request, Response} from 'express'
 import cors from 'cors'
 import { AddressInfo } from 'net'
+import SignUp from './endpoints/signUp'
 
 const app: Express = express()
 
 app.use(express.json())
 app.use(cors())
+
+app.post('/signUp', SignUp)
+
 
 const server = app.listen(process.env.PORT ||3003,()=>{
     if(server){
