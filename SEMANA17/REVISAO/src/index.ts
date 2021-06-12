@@ -1,18 +1,8 @@
-import express,{Express} from 'express'
-import cors from 'cors'
-import { AddressInfo} from 'net'
+import app from './app'
+import createCharacter from './endpoints/createCharacter'
+import deleteCharacters from './endpoints/deleteCharacteres'
+import getAllCharacteres from './endpoints/getAllCharacteres'
 
-const app: Express = express()
-
-app.use(express())
-app.use(cors())
-
-
-const server= app.listen(process.env.PORT||3003,()=>{
-    if(server){
-        const address = server.address()as AddressInfo
-        console.log(`Server is running in http://localhost:${address.port}`)
-    }else{
-        console.log(`Failure upon starting server.`)
-    }
-})
+app.get('/characters',getAllCharacteres)
+app.put('/characters',createCharacter)
+app.delete('/characters/:id',deleteCharacters)

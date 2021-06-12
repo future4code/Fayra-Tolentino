@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@types/knex": "^0.16.1",
+    "chalk": "^4.1.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
@@ -22,7 +23,6 @@
     "start": "tsc && node ./build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Fayra Miranda",
   "license": "ISC"
 }
