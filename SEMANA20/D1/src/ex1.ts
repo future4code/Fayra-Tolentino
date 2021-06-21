@@ -9,7 +9,7 @@ import { User } from './types/types'
 config()
 
 
-function performPurchase(user: User, value: number): User | undefined {
+export default function performPurchase(user: User, value: number): User | undefined {
 	if(user.balance >= value) {
 		return {
 			...user,
