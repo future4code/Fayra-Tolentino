@@ -1,3 +1,0 @@
-bananinha 
-
-export default
