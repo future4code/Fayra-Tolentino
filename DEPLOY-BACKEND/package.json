@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "quest1": "tsc && node ./build/exercicio1.js",
-    "test-try": "tsc && node ./build/testeTry.js",
     "start": "tsc && node build/index.js",
     "dev": "ts-node-dev ./src/index.ts"
   },
